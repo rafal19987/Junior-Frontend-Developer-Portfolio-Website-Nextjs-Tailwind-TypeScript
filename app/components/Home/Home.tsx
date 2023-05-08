@@ -29,7 +29,7 @@ const Home = () => {
       </div>
       <div className="absolute bottom-8 flex items-center justify-center w-full h-20 mt-28 z-0">
         <button className="flex items-center justify-center w-[70px] h-[70px] rounded-full border-2 border-[#FFBE1A]">
-          <Link href="#">
+          <Link href="#about">
             <Image
               className="mt-2 animate-bounce"
               src={scrollDownIcon}

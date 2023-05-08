@@ -3,7 +3,10 @@ import dotIcon from 'assets/dot.svg';
 
 const About = () => {
   return (
-    <section className="flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen">
+    <section
+      id="about"
+      className="flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen"
+    >
       <div className="flex items-center justify-center w-full h-full mt-11">
         <h2 className="text-2xl">About</h2>
       </div>

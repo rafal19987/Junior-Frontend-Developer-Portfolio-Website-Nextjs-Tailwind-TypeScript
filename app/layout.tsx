@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html className="scroll-smooth" lang="en">
+    <html lang="en">
       <body>
         <div className="h-full overflow-x-hidden">
           <Header />
