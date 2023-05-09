@@ -52,12 +52,14 @@ const Contact = () => {
             <textarea
               className="mt-2 p-2 bg-[#B8B8B8]/25 rounded-lg text-white text-base placeholder:text-[#fff]/25"
               cols={40}
-              rows={10}
+              rows={5}
               name="message"
               placeholder="Write your message here...*"
               required
             />
-            <button>Send Message</button>
+            <button className="self-end w-32 h-10 mt-8 bg-[#FFBE1A] rounded-lg text-white">
+              Send Message
+            </button>
           </form>
         </div>
       </div>
