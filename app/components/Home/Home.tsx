@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Permanent_Marker } from 'next/font/google';
@@ -11,6 +13,16 @@ const permamentMarker = Permanent_Marker({
 });
 
 const Home = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, '');
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section
       id="home"
@@ -39,7 +51,7 @@ const Home = () => {
       </div>
       <div className="absolute bottom-8 flex items-center justify-center w-full h-20 mt-28 z-0">
         <button className="flex items-center justify-center w-[75px] h-[75px] rounded-full border-2 border-[#FFBE1A]">
-          <Link href="#about">
+          <Link href="#about" onClick={handleScroll}>
             <Image
               className="mt-2 animate-bounce"
               src={scrollDownIcon}

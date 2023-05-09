@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 const Page = () => {
   return (
     <main className=" flex flex-col justify-center w-full h-full">
-      <div className="snap-y snap-mandatory w-screen h-screen overflow-y-scroll">
+      <div className="snap-y snap-mandatory h-[calc(100vh-3.5rem)] w-screen overflow-y-scroll mt-14">
         <Home />
         <About />
         <Experience />
