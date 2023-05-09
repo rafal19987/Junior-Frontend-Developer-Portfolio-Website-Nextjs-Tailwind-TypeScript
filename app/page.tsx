@@ -6,12 +6,14 @@ import Contact from './components/Contact/Contact';
 
 const Page = () => {
   return (
-    <main className="flex flex-col justify-center w-full h-full">
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
+    <main className="snap-y snap-mandatory flex flex-col justify-center w-full h-full overflow-scroll">
+      <div className="w-screen h-screen">
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Contact />
+      </div>
     </main>
   );
 };
