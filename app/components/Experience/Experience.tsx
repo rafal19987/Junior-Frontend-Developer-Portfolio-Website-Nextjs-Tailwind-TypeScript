@@ -1,8 +1,11 @@
 const Experience = () => {
   return (
-    <section className="flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen ">
-      <div className="flex items-center justify-center w-full h-full mt-11">
-        <h2 className="text-2xl">Experience</h2>
+    <section
+      id="experience"
+      className="flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0"
+    >
+      <div className="flex items-center justify-center w-3/5 h-full mt-14 border-b">
+        <h2 className="p-4 text-2xl">Experience</h2>
       </div>
       <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8">
         <p className="text-sm mt-2">

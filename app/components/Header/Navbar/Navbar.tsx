@@ -5,19 +5,19 @@ const Navbar = () => {
     <nav className="hidden md:flex items-center justify-end w-full h-full lg:w-4/5">
       <ul className="flex justify-around w-4/5">
         <li className=" w-fit hover:underline">
-          <Link href="#">Home</Link>
+          <Link href="#home">Home</Link>
         </li>
         <li className=" w-fit hover:underline">
-          <Link href="#">About</Link>
+          <Link href="#about">About</Link>
         </li>
         <li className=" w-fit hover:underline">
-          <Link href="#">Projects</Link>
+          <Link href="#experience">Experience</Link>
         </li>
         <li className=" w-fit hover:underline">
-          <Link href="#">Experience</Link>
+          <Link href="#projects">Projects</Link>
         </li>
         <li className=" w-fit hover:underline">
-          <Link href="#">Contact</Link>
+          <Link href="#contact">Contact</Link>
         </li>
       </ul>
     </nav>
