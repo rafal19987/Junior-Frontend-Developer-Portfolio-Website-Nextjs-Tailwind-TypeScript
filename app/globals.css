@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@700&display=swap');
+
 :root {
   --body-bg-color: #161616;
   --primary-text-color: #c4c4c4;
@@ -13,7 +15,14 @@
   padding: 0;
 }
 
+html {
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
+  scroll-padding-top: 56px;
+}
+
 body {
   background-color: var(--body-bg-color);
   color: var(--primary-text-color);
+  font-family: 'Poppins', sans-serif;
 }

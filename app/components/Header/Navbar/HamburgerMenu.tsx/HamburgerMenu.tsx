@@ -10,6 +10,16 @@ const HamburgerMenu = () => {
     setIsOpen((open) => !open);
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, '');
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="relative flex items-center justify-end w-full h-full md:hidden ">
       <button
@@ -31,65 +41,135 @@ const HamburgerMenu = () => {
         )}
       </button>
       {!isOpen ? (
-        <nav className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] translate-x-full z-10 transition-all duration-300">
-          <ul className="flex flex-col items-center justify-evenly h-full ">
-            <li className="w-fit hover:underline">
-              <Link href="#" className="text-xl">
+        <div className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] translate-x-full z-10 transition-all duration-300">
+          <ul className="flex flex-col items-center h-full mt-14 ">
+            <li className="group flex flex-col items-center w-fit">
+              <Link
+                href="#home"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Home
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#about"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 About
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
-                Projects
-              </Link>
-            </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#experience"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Experience
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#projects"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
+                Projects
+              </Link>
+            </li>
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#contact"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Contact
               </Link>
             </li>
           </ul>
-        </nav>
+        </div>
       ) : (
-        <nav className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] z-10 transition-all duration-300">
-          <ul className="flex flex-col items-center justify-evenly h-full">
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+        <div className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] z-10 transition-all duration-300">
+          <ul className="flex flex-col items-center h-full mt-14">
+            <li className="group flex flex-col items-center w-fit">
+              <Link
+                href="#home"
+                className="group-hover:text-white text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Home
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#about"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 About
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#experience"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
+                Experience!
+              </Link>
+            </li>
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#projects"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Projects
               </Link>
             </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
-                Experience
-              </Link>
-            </li>
-            <li className=" w-fit hover:underline">
-              <Link href="#" className="text-xl">
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#contact"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Contact
               </Link>
             </li>
           </ul>
-        </nav>
+        </div>
       )}
     </div>
   );
