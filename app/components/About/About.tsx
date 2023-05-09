@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="snap-start flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0"
+      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0"
     >
       <div className="flex items-center justify-center w-3/5 h-full mt-14 border-b ">
         <h2 className="p-4 text-2xl">About</h2>

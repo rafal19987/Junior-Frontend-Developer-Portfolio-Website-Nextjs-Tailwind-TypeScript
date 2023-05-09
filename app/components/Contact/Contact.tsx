@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="snap-start flex flex-col items-center min-h-screen w-screen scroll-my-0"
+      className="snap-center flex flex-col items-center min-h-screen w-screen scroll-my-0"
     >
       <div className="flex items-center justify-center w-3/5 h-full mt-14 border-b">
         <h2 className="p-4 text-2xl">CONTACT</h2>
@@ -57,7 +57,7 @@ const Contact = () => {
               placeholder="Write your message here...*"
               required
             />
-            <button className="self-end w-32 h-10 mt-8 bg-[#FFBE1A] rounded-lg text-white">
+            <button className="self-end w-36 h-10 mt-8 bg-[#FFBE1A] rounded-lg text-black text-lg">
               Send Message
             </button>
           </form>

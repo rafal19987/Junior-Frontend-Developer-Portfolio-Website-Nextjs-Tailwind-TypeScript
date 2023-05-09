@@ -10,6 +10,16 @@ const HamburgerMenu = () => {
     setIsOpen((open) => !open);
   };
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, '');
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <div className="relative flex items-center justify-end w-full h-full md:hidden ">
       <button
@@ -37,7 +47,10 @@ const HamburgerMenu = () => {
               <Link
                 href="#home"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Home
               </Link>
@@ -46,7 +59,10 @@ const HamburgerMenu = () => {
               <Link
                 href="#about"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 About
               </Link>
@@ -55,7 +71,10 @@ const HamburgerMenu = () => {
               <Link
                 href="#experience"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Experience
               </Link>
@@ -64,7 +83,10 @@ const HamburgerMenu = () => {
               <Link
                 href="#projects"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Projects
               </Link>
@@ -73,7 +95,10 @@ const HamburgerMenu = () => {
               <Link
                 href="#contact"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Contact
               </Link>
@@ -87,13 +112,23 @@ const HamburgerMenu = () => {
               <Link
                 href="#home"
                 className="group-hover:text-white text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Home
               </Link>
             </li>
             <li className="flex flex-col items-center w-fit mt-20">
-              <Link href="#about" className="text-2xl" onClick={toggleMenu}>
+              <Link
+                href="#about"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 About
               </Link>
             </li>
@@ -101,18 +136,35 @@ const HamburgerMenu = () => {
               <Link
                 href="#experience"
                 className="text-2xl"
-                onClick={toggleMenu}
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
               >
                 Experience!
               </Link>
             </li>
             <li className="flex flex-col items-center w-fit mt-20">
-              <Link href="#projects" className="text-2xl" onClick={toggleMenu}>
+              <Link
+                href="#projects"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Projects
               </Link>
             </li>
             <li className="flex flex-col items-center w-fit mt-20">
-              <Link href="#contact" className="text-2xl" onClick={toggleMenu}>
+              <Link
+                href="#contact"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
                 Contact
               </Link>
             </li>

@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="snap-start relative min-h-[calc(100vh-3.5rem)] w-screen mt-14 scroll-my-0"
+      className="snap-center relative min-h-[calc(100vh-3.5rem)] w-screen mt-14 scroll-my-0"
     >
       <div className="flex items-center justify-center w-full mt-14">
         <div className="flex items-center justify-center w-36 h-36 bg-gradient-to-b from-[#FFB800]/50 to-transparent rounded-full">
