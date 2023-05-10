@@ -6,7 +6,17 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        animation: {
+          fadeIn: 'fadeIn 1s ease-in-out 1',
+        },
+        fadeIn: {
+          '0%': { transform: 'translateY(40px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
+      },
+    },
   },
   plugins: [],
 };

@@ -16,7 +16,7 @@ const Contact = () => {
       </div>
       <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8">
         <span
-          className={`${permamentMarker.className} self-start text-2xl text-[#FFBE1A]`}
+          className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)]`}
         >
           Let`s talk
         </span>
@@ -30,7 +30,7 @@ const Contact = () => {
               Name:
             </label>
             <input
-              className="mt-2 p-2 bg-[#B8B8B8]/25 rounded-lg text-white text-base placeholder:text-[#fff]/25"
+              className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25"
               type="text"
               name="name"
               placeholder="Write your name here...*"
@@ -40,7 +40,7 @@ const Contact = () => {
               Email:
             </label>
             <input
-              className="mt-2 p-2 bg-[#B8B8B8]/25 rounded-lg text-white text-base placeholder:text-[#fff]/25"
+              className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25"
               type="text"
               name="email"
               placeholder="Write your email here...*"
@@ -50,14 +50,14 @@ const Contact = () => {
               Message*:
             </label>
             <textarea
-              className="mt-2 p-2 bg-[#B8B8B8]/25 rounded-lg text-white text-base placeholder:text-[#fff]/25"
+              className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25"
               cols={40}
-              rows={5}
+              rows={4}
               name="message"
               placeholder="Write your message here...*"
               required
             />
-            <button className="self-end w-36 h-10 mt-8 bg-[#FFBE1A] rounded-lg text-black text-lg">
+            <button className="self-end w-44 h-12 mt-8 border-2 border-[var(--secondary-text-color)] rounded-lg text-[var(--secondary-text-color)] text-base">
               Send Message
             </button>
           </form>
