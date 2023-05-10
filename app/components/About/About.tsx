@@ -1,14 +1,53 @@
+'use client';
+
 import Image from 'next/image';
+import { useRef, useEffect, useState, MutableRefObject } from 'react';
+import { motion as m } from 'framer-motion';
+
 import dotIcon from 'assets/dot.svg';
 
 const About = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const sectionRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      setIsVisible(entry.isIntersecting);
+    });
+    observer.observe(sectionRef.current!);
+  }, [sectionRef, isVisible]);
+
+  if (!isVisible)
+    return (
+      <section
+        id="about"
+        className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0 mt-14"
+      >
+        <div
+          ref={sectionRef}
+          className="flex items-center justify-center w-3/5 h-full  border-b "
+        ></div>
+      </section>
+    );
+
   return (
     <section
       id="about"
-      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0"
+      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0 mt-14"
     >
-      <div className="flex items-center justify-center w-3/5 h-full  border-b ">
-        <h2 className="p-4 text-2xl">About</h2>
+      <div
+        ref={sectionRef}
+        className="flex items-center justify-center w-3/5 h-full  border-b "
+      >
+        <m.h2
+          className="p-4 text-2xl"
+          initial={{ y: '30px' }}
+          animate={{ y: '0' }}
+          transition={{ delay: 0.5 }}
+        >
+          About
+        </m.h2>
       </div>
       <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8 md:w-3/5">
         <span className=" self-start"> Hi there!</span>

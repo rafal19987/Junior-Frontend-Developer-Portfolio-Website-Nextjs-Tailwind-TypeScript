@@ -31,11 +31,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const timer = setTimeout(() => setDone(true), 500);
-
-    return () => {
-      clearTimeout(timer);
-    };
+    setDone(true);
   }, []);
 
   if (!done)
@@ -63,7 +59,7 @@ const Home = () => {
         className="flex items-center justify-center w-full mt-14"
         initial={{ y: '30px', opacity: '0' }}
         animate={{ y: '0', opacity: '1' }}
-        transition={{ delay: 0.1 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
       >
         <div className="flex items-center justify-center w-36 h-36 bg-gradient-to-b from-[#FFB800]/50 to-transparent rounded-full">
           <Image src={avatarSmall} alt="avatar" />
@@ -72,17 +68,17 @@ const Home = () => {
       <div className="flex flex-col items-center mt-7">
         <m.h1
           className={`${permamentMarker.className} text-4xl text-[#CCD6F6]`}
-          initial={{ y: '30px', opacity: '0' }}
-          animate={{ y: '0', opacity: '1' }}
-          transition={{ delay: 0.3 }}
+          initial={{ y: '30px', opacity: 0 }}
+          animate={{ y: '0', opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           Rafael Izdebski
         </m.h1>
         <m.h2
           className="mt-5 text-xl"
-          initial={{ y: '30px', opacity: '0' }}
-          animate={{ y: '0', opacity: '1' }}
-          transition={{ delay: 0.5 }}
+          initial={{ y: '30px', opacity: 0 }}
+          animate={{ y: '0', opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
         >
           I am a Frontend Developer
         </m.h2>
@@ -90,16 +86,16 @@ const Home = () => {
       <div className="flex items-center justify-center mt-12">
         <ul className="flex items-center justify-between w-2/5">
           <m.li
-            initial={{ x: '-100px', opacity: '0' }}
-            animate={{ x: '0', opacity: '1' }}
-            transition={{ delay: 0.7 }}
+            initial={{ x: '-100px', opacity: 0 }}
+            animate={{ x: '0', opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
           >
             <Image src={githubSmall} alt="github icon" />
           </m.li>
           <m.li
-            initial={{ x: '100px', opacity: '0' }}
-            animate={{ x: '0', opacity: '1' }}
-            transition={{ delay: 0.7 }}
+            initial={{ x: '100px', opacity: 0 }}
+            animate={{ x: '0', opacity: 1 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
           >
             <Image src={linkedInSmall} alt="linkedin icon" />
           </m.li>
@@ -107,9 +103,9 @@ const Home = () => {
       </div>
       <m.div
         className="absolute bottom-8 flex items-center justify-center w-full h-20 mt-28 z-0"
-        initial={{ y: '100px', opacity: '0' }}
-        animate={{ y: '0', opacity: '1' }}
-        transition={{ delay: 0.9 }}
+        initial={{ y: '100px', opacity: 0 }}
+        animate={{ y: '0', opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.5 }}
       >
         <button className="flex items-center justify-center w-[75px] h-[75px] rounded-full border-2 border-[#FFBE1A]">
           <Link href="#about" onClick={handleScroll}>
