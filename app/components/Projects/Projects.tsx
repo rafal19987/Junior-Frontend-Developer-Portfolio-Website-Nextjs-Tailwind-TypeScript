@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion as m, useInView } from 'framer-motion';
 import { useRef } from 'react';
+import SectionHeader from '../shared/SectionHeader';
 
 const Projects = () => {
   const myRef = useRef(null);
@@ -15,14 +16,7 @@ const Projects = () => {
     >
       {isInView && (
         <>
-          <m.div
-            className="flex items-center justify-center w-3/5 h-full border-[#64FFDA] border-b"
-            initial={{ y: '30px', opacity: 0 }}
-            animate={{ y: '0px', opacity: 1 }}
-            transition={{ delay: 0.3, opacity: { duration: 0.5 } }}
-          >
-            <h2 className="p-4 text-2xl">Projects</h2>
-          </m.div>
+          <SectionHeader title="projects" />
 
           <m.article
             className="flex flex-col items-center justify-center w-4/5 h-full mt-14  rounded-lg bg-[var(--secondary-bg-color)] border"
@@ -45,7 +39,7 @@ const Projects = () => {
                 animate={{ y: '0px', opacity: 1 }}
                 transition={{ delay: 0.8, opacity: { duration: 0.5 } }}
               >
-                <p className="text-sm ">
+                <h4 className="text-sm text-justify">
                   A web app for everybody who wants to prepare for recruitment
                   interviews, especially in the JavaScript topic. You can add
                   your own pool of questions or use the existing one. The
@@ -54,7 +48,7 @@ const Projects = () => {
                   enough time to complete a study session, you can come back to
                   it later. You can also check the original visual concept that
                   I created in the Figma Prototype.
-                </p>
+                </h4>
               </m.div>
               <div className="flex w-full h-8 p-4 border-b border-gray-500">
                 <ul className="flex items-center justify-around w-full">
@@ -101,40 +95,43 @@ const Projects = () => {
                 </ul>
               </div>
             </div>
-            <div className=" w-full p-2 border-t border-gray-500">
-              <ul className="flex">
+            <div className="w-full px-4 py-2 border-t border-gray-500">
+              <ul className="flex justify-between">
                 <m.li
+                  className=" w-16 h-9 border border-[var(--secondary-text-color)]"
                   initial={{ x: '30px', opacity: 0 }}
                   animate={{ x: '0px', opacity: 1 }}
                   transition={{ delay: 1.5, opacity: { duration: 0.5 } }}
                 >
                   <Link
                     href="#"
-                    className="flex items-center justify-center h-8 w-20 text-yellow-400"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
                   >
                     Live
                   </Link>
                 </m.li>
                 <m.li
+                  className="w-16 h-9 border border-[var(--secondary-text-color)]"
                   initial={{ x: '40px', opacity: 0 }}
                   animate={{ x: '0px', opacity: 1 }}
                   transition={{ delay: 1.6, opacity: { duration: 0.5 } }}
                 >
                   <Link
                     href="#"
-                    className="flex items-center justify-center h-8 w-20 text-yellow-400"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
                   >
                     Repo
                   </Link>
                 </m.li>
                 <m.li
+                  className="w-16 h-9 border border-[var(--secondary-text-color)]"
                   initial={{ x: '50px', opacity: 0 }}
                   animate={{ x: '0px', opacity: 1 }}
                   transition={{ delay: 1.7, opacity: { duration: 0.5 } }}
                 >
                   <Link
                     href="#"
-                    className="flex items-center justify-center h-8 w-20 text-yellow-400"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
                   >
                     Figma
                   </Link>

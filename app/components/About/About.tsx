@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { useRef } from 'react';
 import { motion as m, useInView } from 'framer-motion';
+import SectionHeader from '../shared/SectionHeader';
 
 import dotIcon from 'assets/dot.svg';
 
@@ -17,14 +18,7 @@ const About = () => {
     >
       {isInView && (
         <>
-          <m.div
-            className="flex items-center justify-center w-3/5 h-full border-[#64FFDA] border-b "
-            initial={{ y: '30px', opacity: 0 }}
-            animate={{ y: '0px', opacity: 1 }}
-            transition={{ delay: 0.3, opacity: { duration: 0.5 } }}
-          >
-            <h2 className="p-4 text-2xl">About</h2>
-          </m.div>
+          <SectionHeader title="about" />
           <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8 md:w-3/5">
             <m.span
               className=" self-start"
