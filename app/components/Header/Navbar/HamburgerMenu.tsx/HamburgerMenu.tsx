@@ -28,15 +28,15 @@ const HamburgerMenu = () => {
       >
         {!isOpen ? (
           <>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg transition-all duration-300"></span>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg transition-all duration-100"></span>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg transition-all duration-300"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg transition-all duration-300"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg transition-all duration-100"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg transition-all duration-300"></span>
           </>
         ) : (
           <>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg translate-y-2.5 rotate-45 transition-all duration-300"></span>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg opacity-0 duration-100"></span>
-            <span className="w-7 h-1 bg-[#FFB800] rounded-lg -translate-y-2.5 -rotate-45 transition-all duration-300"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg translate-y-2.5 rotate-45 transition-all duration-300"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg opacity-0 duration-100"></span>
+            <span className="w-7 h-1 bg-[var(--secondary-text-color)] rounded-lg -translate-y-2.5 -rotate-45 transition-all duration-300"></span>
           </>
         )}
       </button>
@@ -141,7 +141,7 @@ const HamburgerMenu = () => {
                   toggleMenu();
                 }}
               >
-                Experience!
+                Experience
               </Link>
             </li>
             <li className="flex flex-col items-center w-fit mt-20">

@@ -4,6 +4,9 @@ import './globals.css';
 export const metadata = {
   title: 'Rafał Izdebski',
   description: 'Rafał Izdebski Frontend Dev Portfolio Site',
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({

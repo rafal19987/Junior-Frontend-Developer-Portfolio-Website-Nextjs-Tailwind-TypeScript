@@ -1,60 +1,152 @@
+'use client';
+
 import Link from 'next/link';
+import { motion as m, useInView } from 'framer-motion';
+import { useRef } from 'react';
+import SectionHeader from '../shared/SectionHeader';
 
 const Projects = () => {
+  const myRef = useRef(null);
+  const isInView = useInView(myRef, { once: true });
+
   return (
     <section
       id="projects"
-      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0"
+      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0  mt-14"
     >
-      <div className="flex items-center justify-center w-3/5 h-full border-b">
-        <h2 className="p-4 text-2xl">Projects</h2>
-      </div>
+      {isInView && (
+        <>
+          <SectionHeader title="projects" />
 
-      <div className="flex flex-col items-center justify-center w-4/5 h-full mt-14 ">
-        <span className="text-base">JavaScript Interview questions App</span>
-        <div className="flex flex-col justify-between w-full h-80 mt-2 rounded-lg bg-black">
-          <div className="flex w-full h-8 p-5 border-b border-gray-500">
-            <ul className="flex items-center justify-around w-full">
-              <li className="text-sm text-gray-500">React</li>
-              <li className="text-sm text-gray-500">Next.js</li>
-              <li className="text-sm text-gray-500">Tailwind</li>
-              <li className="text-sm text-gray-500">Typescript</li>
-              <li className="text-sm text-gray-500">Supabase</li>
-            </ul>
-          </div>
-          <div className="px-5 py-2">
-            <p className="text-sm ">
-              This app was designed and developed by me. Initially, I created a
-              Figma prototype with a visual concept that evolved over time. This
-              app marks my first experience working with Typescript, Next.js,
-              and Supabase. Several functionalities are not yet ready, such as
-              creating a new pool of questions and the user registration and
-              login forms. However, I am continuously working on these aspects
-              during my free time.
-            </p>
-          </div>
-          <div className="flex justify-evenly w-full p-2 border-t border-gray-500">
-            <Link
-              href="#"
-              className="flex items-center justify-center h-8 w-20 text-yellow-400"
+          <m.article
+            className="flex flex-col items-center justify-center w-4/5 h-full mt-14  rounded-lg bg-[var(--secondary-bg-color)]"
+            initial={{ y: '30px', opacity: 0 }}
+            animate={{ y: '0px', opacity: 1 }}
+            transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
+          >
+            <m.h3
+              className="p-4 text-base text-[var(--secondary-text-color)]"
+              initial={{ x: '30px', opacity: 0 }}
+              animate={{ x: '0px', opacity: 1 }}
+              transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
             >
-              Live
-            </Link>
-            <Link
-              href="#"
-              className="flex items-center justify-center h-8 w-20 text-yellow-400"
-            >
-              Repo
-            </Link>
-            <Link
-              href="#"
-              className="flex items-center justify-center h-8 w-20 text-yellow-400"
-            >
-              Figma
-            </Link>
-          </div>
-        </div>
-      </div>
+              JavaScript Interview questions App
+            </m.h3>
+            <div className="flex flex-col justify-between w-full min-h-80 max-h-full">
+              <m.div
+                className="px-5 py-2"
+                initial={{ y: '30px', opacity: 0 }}
+                animate={{ y: '0px', opacity: 1 }}
+                transition={{ delay: 0.8, opacity: { duration: 0.5 } }}
+              >
+                <h4 className="text-sm text-justify">
+                  A web app for everybody who wants to prepare for recruitment
+                  interviews, especially in the JavaScript topic. You can add
+                  your own pool of questions or use the existing one. The
+                  questions are stored in a MongoDB database. Current questions
+                  with answers are saved in local storage, so if you don`t have
+                  enough time to complete a study session, you can come back to
+                  it later. You can also check the original visual concept that
+                  I created in the Figma Prototype.
+                </h4>
+              </m.div>
+
+              <div className="flex items-center justify-center w-full h-full">
+                <ul className="flex flex-wrap items-center justify-center w-full h-full px-4 pb-4">
+                  <m.li
+                    className="flex items-center justify-center w-20 h-full"
+                    initial={{ x: '30px', opacity: 0 }}
+                    animate={{ x: '0px', opacity: 1 }}
+                    transition={{ delay: 0.9, opacity: { duration: 0.5 } }}
+                  >
+                    <span className="text-sm text-gray-500">React </span>
+                  </m.li>
+                  <m.li
+                    className="flex items-center justify-center w-20 h-full"
+                    initial={{ x: '40px', opacity: 0 }}
+                    animate={{ x: '0px', opacity: 1 }}
+                    transition={{ delay: 1, opacity: { duration: 0.5 } }}
+                  >
+                    <span className="text-sm text-gray-500"> Next.js </span>
+                  </m.li>
+                  <m.li
+                    className="flex items-center justify-center w-20 h-full"
+                    initial={{ x: '50px', opacity: 0 }}
+                    animate={{ x: '0px', opacity: 1 }}
+                    transition={{ delay: 1.1, opacity: { duration: 0.5 } }}
+                  >
+                    <span className="text-sm text-gray-500">Tailwind</span>
+                  </m.li>
+                  <m.li
+                    className="flex items-center justify-center w-20 h-full"
+                    initial={{ x: '60px', opacity: 0 }}
+                    animate={{ x: '0px', opacity: 1 }}
+                    transition={{ delay: 1.2, opacity: { duration: 0.5 } }}
+                  >
+                    <span className="text-sm text-gray-500">Typescript</span>
+                  </m.li>
+                  <m.li
+                    className="flex items-center justify-center w-20 h-full "
+                    initial={{ x: '70px', opacity: 0 }}
+                    animate={{ x: '0px', opacity: 1 }}
+                    transition={{ delay: 1.3, opacity: { duration: 0.5 } }}
+                  >
+                    <span className="text-sm text-gray-500">Supabase </span>
+                  </m.li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="w-full px-4 py-4 border-t border-gray-500">
+              <ul className="flex justify-between">
+                <m.li
+                  className=" w-16 h-9 border border-[var(--secondary-text-color)]"
+                  initial={{ x: '30px', opacity: 0 }}
+                  animate={{ x: '0px', opacity: 1 }}
+                  transition={{ delay: 1.5, opacity: { duration: 0.5 } }}
+                >
+                  <Link
+                    href="https://interview-questions-app.vercel.app/"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
+                    target="_blank"
+                  >
+                    Live
+                  </Link>
+                </m.li>
+                <m.li
+                  className="w-16 h-9 border border-[var(--secondary-text-color)]"
+                  initial={{ x: '40px', opacity: 0 }}
+                  animate={{ x: '0px', opacity: 1 }}
+                  transition={{ delay: 1.6, opacity: { duration: 0.5 } }}
+                >
+                  <Link
+                    href="https://github.com/rafal19987/Interview-Questions-App"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
+                    target="_blank"
+                  >
+                    Repo
+                  </Link>
+                </m.li>
+                <m.li
+                  className="w-16 h-9 border border-[var(--secondary-text-color)]"
+                  initial={{ x: '50px', opacity: 0 }}
+                  animate={{ x: '0px', opacity: 1 }}
+                  transition={{ delay: 1.7, opacity: { duration: 0.5 } }}
+                >
+                  <Link
+                    href="https://www.figma.com/proto/8QvtrBsjZqSzMUszJSo9qD/Interview-Questions?node-id=1-3&starting-point-node-id=1%3A3"
+                    className="flex items-center justify-center text-center w-full h-full text-[var(--secondary-text-color)] text-base"
+                    target="_blank"
+                  >
+                    Figma
+                  </Link>
+                </m.li>
+              </ul>
+            </div>
+          </m.article>
+        </>
+      )}
+      <div ref={myRef} className=""></div>
     </section>
   );
 };
