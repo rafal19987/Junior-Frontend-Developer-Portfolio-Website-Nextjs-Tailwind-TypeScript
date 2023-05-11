@@ -15,7 +15,7 @@ const Experience = () => {
       {isInView && (
         <>
           <m.div
-            className="flex items-center justify-center w-3/5 h-full border-b"
+            className="flex items-center justify-center w-3/5 h-full border-[#64FFDA] border-b"
             initial={{ y: '30px', opacity: 0 }}
             animate={{ y: '0px', opacity: 1 }}
             transition={{ delay: 0.3, opacity: { duration: 0.5 } }}

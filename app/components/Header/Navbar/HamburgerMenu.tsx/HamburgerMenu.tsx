@@ -141,7 +141,7 @@ const HamburgerMenu = () => {
                   toggleMenu();
                 }}
               >
-                Experience!
+                Experience
               </Link>
             </li>
             <li className="flex flex-col items-center w-fit mt-20">

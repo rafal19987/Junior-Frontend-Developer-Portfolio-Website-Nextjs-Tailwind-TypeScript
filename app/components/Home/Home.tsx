@@ -61,7 +61,7 @@ const Home = () => {
         animate={{ y: '0', opacity: '1' }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        <div className="flex items-center justify-center w-36 h-36 bg-gradient-to-b from-[#FFB800]/50 to-transparent rounded-full">
+        <div className="flex items-center justify-center w-36 h-36 bg-gradient-to-b from-[#64FFDA]/50 to-transparent rounded-full">
           <Image src={avatarSmall} alt="avatar" />
         </div>
       </m.div>
@@ -107,7 +107,7 @@ const Home = () => {
         animate={{ y: '0', opacity: 1 }}
         transition={{ delay: 0.9, duration: 0.5 }}
       >
-        <button className="flex items-center justify-center w-[75px] h-[75px] rounded-full border-2 border-[#FFBE1A]">
+        <button className="flex items-center justify-center w-[75px] h-[75px] rounded-full border-2 border-[#64FFDA]">
           <Link href="#about" onClick={handleScroll}>
             <Image
               className="mt-2 animate-bounce"
