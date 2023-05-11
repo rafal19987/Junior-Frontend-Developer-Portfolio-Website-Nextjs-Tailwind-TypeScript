@@ -90,18 +90,7 @@ const Experience = () => {
                   companyName="Magelektro"
                   companySite="https://www.magelektro.pl/"
                   period="04-2022 - 07-2022"
-                  description=" I had the whole sales process under my belt - from
-              chatting with customers about what they needed to making
-              sure their orders got fulfilled to keeping them coming
-              back for more. I got to work with over 200 different
-              clients, including some big names like Volkswagen,
-              Amica, Braun, Żabka, and even a foreign partner,
-              FlexLink. One of my biggest responsibilities was to
-              negotiate contracts with some really big players in the
-              electrical manufacturing space, like Schenider, Eaton,
-              Legrand, and Hager. So I`ve picked up some pretty strong
-              contract negotiation and vendor management skills along
-              the way."
+                  description="As a Public Procurement Specialist for military units my main tasks included liaising with the military clients for procurement orders, preparing bids for tenders, handling all the necessary paperwork, negotiating purchase terms with suppliers, ensuring timely delivery of goods, communicating with clients regarding tender results, reviewing competing offers to ensure compliance with client requirements, and organizing deliveries to clients. This experience provided me with valuable skills in customer communication, negotiation, documentation, and managing procurement processes."
                 />
               )}
               {activeTab === 'company3' && (
@@ -110,18 +99,7 @@ const Experience = () => {
                   companyName="Asaj"
                   companySite="https://www.asaj.pl/"
                   period="07-2018 - 07-2020"
-                  description=" I had the whole sales process under my belt - from
-            chatting with customers about what they needed to making
-            sure their orders got fulfilled to keeping them coming
-            back for more. I got to work with over 200 different
-            clients, including some big names like Volkswagen,
-            Amica, Braun, Żabka, and even a foreign partner,
-            FlexLink. One of my biggest responsibilities was to
-            negotiate contracts with some really big players in the
-            electrical manufacturing space, like Schenider, Eaton,
-            Legrand, and Hager. So I`ve picked up some pretty strong
-            contract negotiation and vendor management skills along
-            the way."
+                  description="As a Customer Advisor, I was responsible for serving retail customers, preparing commercial offers, maintaining strong relationships with assigned clients, managing the complaint department at the branch, preparing reports on logistics transport, negotiating deals with suppliers, overseeing lighting projects for clients, and collaborating with electricians, energy specialists, and photovoltaic installation technicians. This experience provided me with valuable skills in customer service, project management, logistics, and collaboration with specialists from various fields."
                 />
               )}
             </div>
