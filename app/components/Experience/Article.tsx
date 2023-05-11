@@ -51,14 +51,14 @@ const Article = ({
       >
         {period}
       </m.p>
-      <div className="flex flex-col justify-between w-full h-80">
+      <div className="flex flex-col justify-between w-full min-h-80 max-h-full">
         <m.div
           className="mt-2"
           initial={{ y: '30px', opacity: 0 }}
           animate={{ y: '0px', opacity: 1 }}
           transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
         >
-          <h4 className="text-sm text-justify">{description}</h4>
+          <h4 className="pb-2 text-sm text-justify">{description}</h4>
         </m.div>
       </div>
     </m.article>
