@@ -91,18 +91,6 @@ const HamburgerMenu = () => {
                 Projects
               </Link>
             </li>
-            <li className="flex flex-col items-center w-fit mt-20">
-              <Link
-                href="#contact"
-                className="group-hover:text-white text-2xl"
-                onClick={(e) => {
-                  handleScroll(e);
-                  toggleMenu();
-                }}
-              >
-                Contact
-              </Link>
-            </li>
           </ul>
         </div>
       ) : (
@@ -154,18 +142,6 @@ const HamburgerMenu = () => {
                 }}
               >
                 Projects
-              </Link>
-            </li>
-            <li className="flex flex-col items-center w-fit mt-20">
-              <Link
-                href="#contact"
-                className="text-2xl"
-                onClick={(e) => {
-                  handleScroll(e);
-                  toggleMenu();
-                }}
-              >
-                Contact
               </Link>
             </li>
           </ul>

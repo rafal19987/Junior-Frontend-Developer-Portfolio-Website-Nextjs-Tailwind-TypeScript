@@ -21,16 +21,16 @@ const Experience = () => {
       className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0 mt-14"
     >
       {isInView && (
-        <>
+        <div className="flex flex-col items-center w-full xl:w-3/5">
           <SectionHeader title="Experience" />
-          <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8">
-            <ul className="flex text-sm text-center border-b border-gray-200  ">
+          <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8 xl:w-full">
+            <ul className="flex text-sm text-center border-b border-gray-200 xl:w-2/5 xl:justify-between">
               <li className="mr-2">
                 <button
                   className={`${
                     activeTab === 'company1'
-                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240]'
-                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)]'
+                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240] text-base'
+                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)] text-base'
                   } `}
                   onClick={() => handleTabClick('company1')}
                 >
@@ -41,8 +41,8 @@ const Experience = () => {
                 <button
                   className={`${
                     activeTab === 'company2'
-                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240]'
-                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)]'
+                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240] text-base'
+                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)] text-base'
                   }  `}
                   onClick={() => handleTabClick('company2')}
                 >
@@ -53,12 +53,24 @@ const Experience = () => {
                 <button
                   className={`${
                     activeTab === 'company3'
-                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240]'
-                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)]'
+                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240] text-base'
+                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)] text-base'
                   } `}
                   onClick={() => handleTabClick('company3')}
                 >
                   Asaj
+                </button>
+              </li>
+              <li>
+                <button
+                  className={`${
+                    activeTab === 'company4'
+                      ? ' inline-block p-4 text-[var(--secondary-text-color)]  rounded-t-lg bg-[#112240] text-base'
+                      : 'inline-block p-4 text-[var(--primary-text-color)]  rounded-t-lg bg-[var(--body-bg-color)] text-base'
+                  } `}
+                  onClick={() => handleTabClick('company4')}
+                >
+                  Wandlee
                 </button>
               </li>
             </ul>
@@ -102,9 +114,18 @@ const Experience = () => {
                   description="As a Customer Advisor, I was responsible for serving retail customers, preparing commercial offers, maintaining strong relationships with assigned clients, managing the complaint department at the branch, preparing reports on logistics transport, negotiating deals with suppliers, overseeing lighting projects for clients, and collaborating with electricians, energy specialists, and photovoltaic installation technicians. This experience provided me with valuable skills in customer service, project management, logistics, and collaboration with specialists from various fields."
                 />
               )}
+              {activeTab === 'company4' && (
+                <Article
+                  position="JavaScript Developer Intern"
+                  companyName="Wandlee"
+                  companySite="https://wandlee.com/"
+                  period="08-2019 - 09-2019"
+                  description="As a JavaScript develeoper I was considered on ..."
+                />
+              )}
             </div>
           </div>
-        </>
+        </div>
       )}
       <div ref={myRef} className=""></div>
     </section>

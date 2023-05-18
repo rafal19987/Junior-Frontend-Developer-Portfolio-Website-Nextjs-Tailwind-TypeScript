@@ -17,20 +17,19 @@ const About = () => {
       className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0 mt-14"
     >
       {isInView && (
-        <>
+        <div className="xl:w-3/5 xl:flex xl:flex-col xl:items-center">
           <SectionHeader title="about" />
-          <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8 md:w-3/5">
-            <m.span
-              className=" self-start"
+          <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8 md:w-3/5 xl:w-full">
+            <m.p
+              className=" self-start xl:text-2xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
             >
-              {' '}
               Hi there!
-            </m.span>
+            </m.p>
             <m.p
-              className="text-sm mt-2 "
+              className="w-full text-sm mt-2 xl:mt-4 xl:text-xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
@@ -39,7 +38,7 @@ const About = () => {
               opportunities to grow and excel in the field.
             </m.p>
             <m.p
-              className="text-sm mt-2"
+              className="text-sm mt-2 xl:mt-3 xl:text-xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
@@ -49,18 +48,18 @@ const About = () => {
               and Next.js. In free time I like kayaking.
             </m.p>
           </div>
-        </>
+        </div>
       )}
       {isInView && (
-        <>
+        <div className="xl:w-3/5">
           <m.div
             className="flex flex-col items-center justify-center w-full h-full mt-12"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, opacity: { duration: 0.5 } }}
           >
-            <h3 className="text-xl">Frontend skills</h3>
-            <div className="w-4/5 h-full mt-8 ">
+            <h3 className="text-xl xl:text-2xl">Frontend skills</h3>
+            <div className="w-4/5 h-full mt-8 xl:w-full">
               <ol className="list-disc">
                 <m.li
                   className="flex mt-2"
@@ -69,7 +68,10 @@ const About = () => {
                   transition={{ delay: 0.8, opacity: { duration: 0.5 } }}
                 >
                   <Image src={dotIcon} alt="dot order list icon"></Image>
-                  <span className="ml-2 text-sm"> HTML, CSS/SASS</span>
+                  <span className="ml-2 text-sm xl:ml-4 xl:text-xl">
+                    {' '}
+                    HTML, CSS/SASS
+                  </span>
                 </m.li>
                 <m.li
                   className="flex mt-1"
@@ -78,7 +80,9 @@ const About = () => {
                   transition={{ delay: 0.9, opacity: { duration: 0.5 } }}
                 >
                   <Image src={dotIcon} alt="dot order list icon"></Image>
-                  <span className="ml-2 text-sm">React, Next.js</span>
+                  <span className="ml-2 text-sm xl:ml-4 xl:text-xl">
+                    React, Next.js
+                  </span>
                 </m.li>
                 <m.li
                   className="flex mt-1"
@@ -87,7 +91,7 @@ const About = () => {
                   transition={{ delay: 1, opacity: { duration: 0.5 } }}
                 >
                   <Image src={dotIcon} alt="dot order list icon"></Image>
-                  <span className="ml-2 text-sm">
+                  <span className="ml-2 text-sm xl:ml-4 xl:text-xl">
                     Tailwind, Styled-components
                   </span>
                 </m.li>
@@ -98,7 +102,7 @@ const About = () => {
                   transition={{ delay: 1.1, opacity: { duration: 0.5 } }}
                 >
                   <Image src={dotIcon} alt="dot order list icon"></Image>
-                  <span className="ml-2 text-sm">
+                  <span className="ml-2 text-sm xl:ml-4 xl:text-xl">
                     Conventional Commits, BEM
                   </span>
                 </m.li>
@@ -109,12 +113,14 @@ const About = () => {
                   transition={{ delay: 1.2, opacity: { duration: 0.5 } }}
                 >
                   <Image src={dotIcon} alt="dot order list icon"></Image>
-                  <span className="ml-2 text-sm">Figma, Github</span>
+                  <span className="ml-2 text-sm xl:ml-4 xl:text-xl">
+                    Figma, Github
+                  </span>
                 </m.li>
               </ol>
             </div>
           </m.div>
-        </>
+        </div>
       )}
       <div ref={myRef} className=""></div>
     </section>
