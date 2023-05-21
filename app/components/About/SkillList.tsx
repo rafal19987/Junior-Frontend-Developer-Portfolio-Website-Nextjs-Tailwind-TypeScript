@@ -1,4 +1,3 @@
-import { motion as m, useInView } from 'framer-motion';
 import Skill from './Skill';
 
 const SkillList = () => {

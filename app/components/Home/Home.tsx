@@ -63,6 +63,7 @@ const Home = () => {
             width={130}
             height={130}
             alt="avatar small"
+            priority={true}
           />
         </div>
 
@@ -73,6 +74,7 @@ const Home = () => {
               width={210}
               height={210}
               alt="avatar medium"
+              priority={true}
             />
           </div>
           <div className="hidden absolute lg:block lg:right-20 lg:top-8 xl:right-40">
@@ -81,6 +83,7 @@ const Home = () => {
               width={250}
               height={250}
               alt="avatar large"
+              priority={true}
             />
           </div>
           <div className="">

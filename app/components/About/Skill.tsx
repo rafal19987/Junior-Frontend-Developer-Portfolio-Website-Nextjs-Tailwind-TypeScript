@@ -17,7 +17,9 @@ const Skill = ({ startX, delayTime, description }: SkillProps) => {
       transition={{ delay: delayTime, opacity: { duration: 0.5 } }}
     >
       <Image src={dotIcon} alt="dot order list icon"></Image>
-      <span className="ml-2 text-sm xl:ml-4 xl:text-xl">{description}</span>
+      <span className="ml-2 text-sm md:text-xl xl:ml-4 xl:text-xl">
+        {description}
+      </span>
     </m.li>
   );
 };

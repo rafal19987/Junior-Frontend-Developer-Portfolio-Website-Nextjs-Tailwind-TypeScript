@@ -10,7 +10,7 @@ type LinkItemProps = {
 const LinkItem = ({ startX, delayTime, description }: LinkItemProps) => {
   return (
     <m.li
-      className="group w-16 h-9 border border-[var(--secondary-text-color)] xl:w-20 xl:h-12  hover:border-violet-500 transition-colors"
+      className="group w-16 h-9 border border-[var(--secondary-text-color)] md:w-20 md:h-12  hover:border-violet-500 transition-colors"
       initial={{ x: `${startX}px`, opacity: 0 }}
       animate={{ x: '0px', opacity: 1 }}
       transition={{ delay: delayTime, opacity: { duration: 0.5 } }}

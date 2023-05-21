@@ -1,17 +1,17 @@
-import { motion as m, useInView } from 'framer-motion';
+import { motion as m } from 'framer-motion';
 import LinkList from './LinkList';
 import StackList from './StackList';
 
 const Article = () => {
   return (
     <m.article
-      className="flex flex-col items-center justify-center w-full min-h-[400px] h-full mt-14   rounded-lg bg-[var(--secondary-bg-color)] xl:w-3/5 "
+      className="flex flex-col items-center justify-center w-full max-w-[400px] min-h-[400px] h-full mt-14   rounded-lg bg-[var(--secondary-bg-color)]  md:w-4/5"
       initial={{ y: '30px', opacity: 0 }}
       animate={{ y: '0px', opacity: 1 }}
       transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
     >
       <m.h3
-        className="p-4 text-base text-[var(--secondary-text-color)] xl:text-xl"
+        className="p-4 text-base text-[var(--secondary-text-color)] md:text-2xl md:self-start"
         initial={{ x: '30px', opacity: 0 }}
         animate={{ x: '0px', opacity: 1 }}
         transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
@@ -25,7 +25,7 @@ const Article = () => {
           animate={{ y: '0px', opacity: 1 }}
           transition={{ delay: 0.8, opacity: { duration: 0.5 } }}
         >
-          <h4 className="text-sm text-justify  xl:text-xl">
+          <h4 className="text-sm text-justify  md:text-xl">
             A web app for everybody who wants to prepare for recruitment
             interviews, especially in the JavaScript topic. You can add your own
             pool of questions or use the existing one. The questions are stored

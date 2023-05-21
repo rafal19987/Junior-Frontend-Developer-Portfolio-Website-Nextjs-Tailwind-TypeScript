@@ -14,7 +14,7 @@ const StackItem = ({ startX, delayTime, description }: StackItemProps) => {
       animate={{ x: '0px', opacity: 1 }}
       transition={{ delay: delayTime, opacity: { duration: 0.5 } }}
     >
-      <span className="text-sm text-gray-500  xl:text-base">{description}</span>
+      <span className="text-sm text-gray-500  md:text-base">{description}</span>
     </m.li>
   );
 };

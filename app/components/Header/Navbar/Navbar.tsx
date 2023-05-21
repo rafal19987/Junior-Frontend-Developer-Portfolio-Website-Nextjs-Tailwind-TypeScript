@@ -35,6 +35,11 @@ const Navbar = () => {
             Projects
           </Link>
         </li>
+        <li className=" w-fit hover:underline">
+          <Link href="#contact" onClick={handleScroll}>
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );

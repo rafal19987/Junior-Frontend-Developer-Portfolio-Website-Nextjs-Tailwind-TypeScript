@@ -14,8 +14,8 @@ const Projects = () => {
     <SectionBody id="projects">
       {isInView && (
         <>
-          <SectionHeader title="projects" />
-          <div className="flex flex-col items-center w-full p-6 xl:w-3/5">
+          <div className="flex flex-col items-center w-full xl:w-3/5">
+            <SectionHeader title="projects" />
             <Article />
           </div>
         </>

@@ -15,9 +15,9 @@ const About = () => {
       {isInView && (
         <div className="flex flex-col items-center border-red-500 xl:w-3/5">
           <SectionHeader title="about" />
-          <div className="flex flex-col items-center justify-center w-full  h-full mt-8 p-6 md:w-3/5 xl:w-full">
+          <div className="flex flex-col items-center justify-center w-full  h-full mt-8 p-6 md:w-4/5 xl:w-full">
             <m.p
-              className=" self-start xl:text-2xl"
+              className=" self-start md:text-2xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
@@ -25,7 +25,7 @@ const About = () => {
               Hi there!
             </m.p>
             <m.p
-              className="w-full text-sm mt-2 xl:mt-4 xl:text-xl"
+              className="w-full text-sm mt-2 md:text-xl xl:mt-4 xl:text-xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
@@ -34,7 +34,7 @@ const About = () => {
               opportunities to grow and excel in the field.
             </m.p>
             <m.p
-              className="text-sm mt-2 xl:mt-3 xl:text-xl"
+              className="text-sm mt-2 md:text-xl xl:mt-3 xl:text-xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.6, opacity: { duration: 0.5 } }}

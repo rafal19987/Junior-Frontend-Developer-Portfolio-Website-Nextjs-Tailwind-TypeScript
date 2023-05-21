@@ -10,8 +10,8 @@ const FrontendSkills = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.7, opacity: { duration: 0.5 } }}
       >
-        <h3 className="text-xl xl:text-2xl">Frontend skills</h3>
-        <div className="w-4/5 h-full mt-8 xl:w-full">
+        <h3 className="text-xl xl:text-3xl">Frontend skills</h3>
+        <div className="w-full h-full mt-8 xl:w-full">
           <SkillList />
         </div>
       </m.div>

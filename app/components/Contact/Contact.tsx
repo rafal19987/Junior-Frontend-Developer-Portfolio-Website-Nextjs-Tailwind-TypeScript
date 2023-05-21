@@ -54,26 +54,28 @@ const Contact = () => {
       {isInView && (
         <>
           <SectionHeader title="contact" />
-          <div className="flex flex-col items-center justify-center w-full h-full mt-8 p-6">
-            <m.span
-              className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)]`}
-              initial={{ y: '30px', opacity: 0 }}
-              animate={{ y: '0px', opacity: 1 }}
-              transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
-            >
-              Let`s talk
-            </m.span>
-            <m.span
-              className="mt-2 text-base"
-              initial={{ y: '30px', opacity: 0 }}
-              animate={{ y: '0px', opacity: 1 }}
-              transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
-            >
-              If you have any questions or potential collaborations, I would be
-              thrilled to explore them. Thank you for your attention!
-            </m.span>
+          <div className="flex flex-col items-center justify-center w-full h-full mt-8 p-6 xl:w-[1000px] md:items-start md:flex-row ">
+            <div className="flex flex-col items-center justify-start md:w-2/5">
+              <m.span
+                className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)] md:text-3xl`}
+                initial={{ y: '30px', opacity: 0 }}
+                animate={{ y: '0px', opacity: 1 }}
+                transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
+              >
+                Let`s talk
+              </m.span>
+              <m.span
+                className="mt-2 text-base md:text-xl"
+                initial={{ y: '30px', opacity: 0 }}
+                animate={{ y: '0px', opacity: 1 }}
+                transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
+              >
+                If you have any questions or potential collaborations, I would
+                be thrilled to explore them. Thank you for your attention!
+              </m.span>
+            </div>
             <m.div
-              className="w-full h-96"
+              className="w-full h-96 md:w-3/5 md:ml-8"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
@@ -84,7 +86,7 @@ const Contact = () => {
                 </span>
               )}
               <form className="flex flex-col w-full">
-                <label className=" mt-7" htmlFor="name">
+                <label className=" mt-7 md:mt-0" htmlFor="name">
                   {!nameValid && (
                     <span className="mt-4 text-red-500">
                       Imię musi mieć przynajmniej 4 znaki
