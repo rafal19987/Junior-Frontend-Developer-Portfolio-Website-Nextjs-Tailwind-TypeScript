@@ -4,6 +4,7 @@ import { Permanent_Marker } from 'next/font/google';
 import { motion as m, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionHeader from '../shared/SectionHeader';
+import SectionBody from '../shared/SectionBody';
 
 const permamentMarker = Permanent_Marker({
   weight: '400',
@@ -15,14 +16,11 @@ const Contact = () => {
   const isInView = useInView(myRef, { once: true });
 
   return (
-    <section
-      id="contact"
-      className="snap-center flex flex-col items-center min-h-[calc(100vh-3.5rem)] w-screen scroll-my-0 mt-14"
-    >
+    <SectionBody id="contact">
       {isInView && (
         <>
           <SectionHeader title="contact" />
-          <div className="flex flex-col items-center justify-center w-4/5 h-full mt-8">
+          <div className="flex flex-col items-center justify-center w-full h-full mt-8 p-6">
             <m.span
               className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)]`}
               initial={{ y: '30px', opacity: 0 }}
@@ -87,7 +85,7 @@ const Contact = () => {
         </>
       )}
       <div ref={myRef} className=""></div>
-    </section>
+    </SectionBody>
   );
 };
 

@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
   return (
     <div className="relative flex items-center justify-end w-full h-full md:hidden ">
       <button
-        className="flex flex-col items-center justify-evenly w-12 h-9 mr-8 bg-[#D9D9D9]/20 rounded-lg"
+        className="flex flex-col items-center justify-evenly w-12 h-9 mr-8 bg-[var(--secondary-bg-color)] rounded-lg"
         onClick={toggleMenu}
       >
         {!isOpen ? (

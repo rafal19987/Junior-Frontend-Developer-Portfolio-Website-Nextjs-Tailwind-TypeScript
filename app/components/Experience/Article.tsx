@@ -20,7 +20,7 @@ const Article = ({
 }: ArticleProps) => {
   return (
     <m.article
-      className="flex flex-col w-full h-full p-4 rounded-lg bg-[var(--secondary-bg-color)] xl:w-3/5"
+      className="flex flex-col w-full min-h-[400px] h-full p-4 rounded-lg bg-[var(--secondary-bg-color)] xl:w-3/5"
       initial={{ y: '30px', opacity: 0 }}
       animate={{ y: '0px', opacity: 1 }}
       transition={{ delay: 0.2, opacity: { duration: 0.5 } }}

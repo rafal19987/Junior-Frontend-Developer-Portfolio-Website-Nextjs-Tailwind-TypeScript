@@ -4,13 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion as m } from 'framer-motion';
+import SocialList from './SocialList';
 
 import { Permanent_Marker } from 'next/font/google';
-import avatarSmall from 'assets/avatarSmall.png';
-import githubSmall from 'assets/githubSmall.svg';
-import linkedInSmall from 'assets/linkedinSmall.svg';
 import scrollDownIcon from 'assets/scrollDown.svg';
-import loadingIcon from 'assets/loading.svg';
 import bigLogo from 'assets/bigLogo.svg';
 
 const permamentMarker = Permanent_Marker({
@@ -56,8 +53,16 @@ const Home = () => {
       id="home"
       className="snap-center relative min-h-[calc(100vh-3.5rem)] w-screen xl:flex  xl:justify-center"
     >
-      <div className="h-full xl:w-3/5">
-        <div className="flex flex-col items-center mt-7 xl:mt-20">
+      <div className="flex flex-col items-center justify-center h-full p-6 xl:w-3/5 mt-14">
+        <div className="flex flex-col items-start mt-14 xl:mt-20">
+          <m.span
+            initial={{ y: '30px', opacity: 0 }}
+            animate={{ y: '0', opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="text-[var(--secondary-text-color)]"
+          >
+            Hi, my name is
+          </m.span>
           <m.h1
             className={`${permamentMarker.className} text-4xl text-[#CCD6F6] xl:text-6xl`}
             initial={{ y: '30px', opacity: 0 }}
@@ -67,41 +72,18 @@ const Home = () => {
             Rafal Izdebski
           </m.h1>
           <m.h2
-            className="mt-5 text-xl xl:text-3xl"
+            className="mt-5 text-sm xl:text-3xl"
             initial={{ y: '30px', opacity: 0 }}
             animate={{ y: '0', opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            I am a Frontend Developer
+            I am an aspiring Frontend Developer focusing mainly on working with
+            React (occassionally designing in Figma).
           </m.h2>
-        </div>
-        <div className="flex items-center justify-center mt-12">
-          <ul className="flex items-center justify-between w-2/5 xl:w-2/12">
-            <m.li
-              initial={{ x: '-100px', opacity: 0 }}
-              animate={{ x: '0', opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-            >
-              <Link href="https://github.com/rafal19987" target="_blank">
-                <Image src={githubSmall} alt="github icon" />
-              </Link>
-            </m.li>
-            <m.li
-              initial={{ x: '100px', opacity: 0 }}
-              animate={{ x: '0', opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.5 }}
-            >
-              <Link
-                href="https://www.linkedin.com/in/rafa%C5%82-izdebski-78023b1b0/"
-                target="_blank"
-              >
-                <Image src={linkedInSmall} alt="linkedin icon" />
-              </Link>
-            </m.li>
-          </ul>
+          <SocialList />
         </div>
         <m.div
-          className="absolute bottom-8 flex items-center justify-center w-full h-20 mt-28 z-0 xl:flex xl:w-3/5 xl:bottom-24"
+          className="absolute bottom-8 flex items-center justify-center w-full h-20 mt-28 z-0 xl:flex xl:w-3/5 xl:bottom-24 "
           initial={{ y: '100px', opacity: 0 }}
           animate={{ y: '0', opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.5 }}
