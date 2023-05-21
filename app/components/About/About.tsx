@@ -43,10 +43,11 @@ const About = () => {
               challenges. Currently, I am expanding my knowledge in TypeScript
               and Next.js. In free time I like kayaking.
             </m.p>
+            <FrontendSkills />
           </div>
         </div>
       )}
-      {isInView && <FrontendSkills />}
+
       <div ref={myRef} className=""></div>
     </SectionBody>
   );

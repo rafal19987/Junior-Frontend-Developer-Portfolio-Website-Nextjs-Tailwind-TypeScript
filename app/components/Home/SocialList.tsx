@@ -4,7 +4,7 @@ import linkedInSmall from 'assets/linkedinSmall.svg';
 
 const SocialList = () => {
   return (
-    <ul className="self-center flex items-center justify-between mt-14 w-3/5 xl:w-2/12">
+    <ul className="self-center flex items-center justify-between mt-14 w-3/5  md:w-2/5 md:mt-20 md:self-start lg:w-52 lg:h-56 lg:mt-2 lg:ml-8 ">
       <SocialItem
         startX="-100"
         reference="https://github.com/rafal19987"

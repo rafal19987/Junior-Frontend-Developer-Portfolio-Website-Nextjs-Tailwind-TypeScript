@@ -5,6 +5,9 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { motion as m } from 'framer-motion';
 import SocialList from './SocialList';
+import avatarLarge from 'assets/avatar-lg.png';
+import avatarMedium from 'assets/avatar-md.png';
+import avatarSmall from 'assets/avatarSmall.png';
 
 import { Permanent_Marker } from 'next/font/google';
 import scrollDownIcon from 'assets/scrollDown.svg';
@@ -51,35 +54,62 @@ const Home = () => {
   return (
     <section
       id="home"
-      className="snap-center relative min-h-[calc(100vh-3.5rem)] w-screen xl:flex  xl:justify-center"
+      className="snap-center relative min-h-[calc(100vh-3.5rem)] w-screen"
     >
-      <div className="flex flex-col items-center justify-center h-full p-6 xl:w-3/5 mt-14">
-        <div className="flex flex-col items-start mt-14 xl:mt-20">
-          <m.span
-            initial={{ y: '30px', opacity: 0 }}
-            animate={{ y: '0', opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            className="text-[var(--secondary-text-color)]"
-          >
-            Hi, my name is
-          </m.span>
-          <m.h1
-            className={`${permamentMarker.className} text-4xl text-[#CCD6F6] xl:text-6xl`}
-            initial={{ y: '30px', opacity: 0 }}
-            animate={{ y: '0', opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.5 }}
-          >
-            Rafal Izdebski
-          </m.h1>
-          <m.h2
-            className="mt-5 text-sm xl:text-3xl"
-            initial={{ y: '30px', opacity: 0 }}
-            animate={{ y: '0', opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-          >
-            I am an aspiring Frontend Developer focusing mainly on working with
-            React (occassionally designing in Figma).
-          </m.h2>
+      <div className="flex flex-col items-center justify-center h-full p-6 mt-14">
+        <div className="md:hidden">
+          <Image
+            src={avatarSmall}
+            width={130}
+            height={130}
+            alt="avatar small"
+          />
+        </div>
+
+        <div className="relative flex flex-col items-start w-full mt-8 md:w-4/5 xl:w-[1000px]">
+          <div className="hidden absolute md:block md:right-0 lg:hidden">
+            <Image
+              src={avatarMedium}
+              width={210}
+              height={210}
+              alt="avatar medium"
+            />
+          </div>
+          <div className="hidden absolute lg:block lg:right-20 lg:top-8 xl:right-40">
+            <Image
+              src={avatarLarge}
+              width={250}
+              height={250}
+              alt="avatar large"
+            />
+          </div>
+          <div className="">
+            <m.span
+              initial={{ y: '30px', opacity: 0 }}
+              animate={{ y: '0', opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+              className="text-sm text-[var(--secondary-text-color)] md:text-xl"
+            >
+              Hi, my name is
+            </m.span>
+            <m.h1
+              className={`${permamentMarker.className} text-4xl text-[#CCD6F6] md:mt-6 md:text-5xl lg:mt-8`}
+              initial={{ y: '30px', opacity: 0 }}
+              animate={{ y: '0', opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              Rafal Izdebski
+            </m.h1>
+            <m.h2
+              className="mt-5 text-sm md:w-[400px] md:mt-4 md:text-xl "
+              initial={{ y: '30px', opacity: 0 }}
+              animate={{ y: '0', opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+            >
+              I am an aspiring Frontend Developer focusing mainly on working
+              with React (occassionally designing in Figma).
+            </m.h2>
+          </div>
           <SocialList />
         </div>
         <m.div
