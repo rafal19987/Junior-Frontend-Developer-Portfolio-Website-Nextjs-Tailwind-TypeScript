@@ -20,13 +20,13 @@ const Article = ({
 }: ArticleProps) => {
   return (
     <m.article
-      className="flex flex-col w-full h-full p-4 rounded-lg bg-[var(--secondary-bg-color)]"
+      className="flex flex-col w-full min-h-[400px] h-full p-4 rounded-lg bg-[var(--secondary-bg-color)] md:w-4/5"
       initial={{ y: '30px', opacity: 0 }}
       animate={{ y: '0px', opacity: 1 }}
       transition={{ delay: 0.2, opacity: { duration: 0.5 } }}
     >
       <m.h3
-        className="text-base text-[var(--primary-text-color)]"
+        className="text-base text-[var(--primary-text-color)] md:text-xl xl:text-xl"
         initial={{ x: '30px', opacity: 0 }}
         animate={{ x: '0px', opacity: 1 }}
         transition={{ delay: 0.3, opacity: { duration: 0.5 } }}
@@ -34,7 +34,7 @@ const Article = ({
         {position}
         <span>
           <Link
-            className="text-base text-[var(--secondary-text-color)]"
+            className="text-base text-[var(--secondary-text-color)] xl:text-xl hover:text-violet-500 transition-colors"
             href={`${companySite}`}
             target="_blank"
           >
@@ -44,7 +44,7 @@ const Article = ({
         </span>
       </m.h3>
       <m.p
-        className="text-sm"
+        className="text-sm xl:text-base"
         initial={{ y: '30px', opacity: 0 }}
         animate={{ y: '0px', opacity: 1 }}
         transition={{ delay: 0.4, opacity: { duration: 0.5 } }}
@@ -58,7 +58,9 @@ const Article = ({
           animate={{ y: '0px', opacity: 1 }}
           transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
         >
-          <h4 className="pb-2 text-sm text-justify">{description}</h4>
+          <h4 className="pb-2 text-sm text-justify md:text-xl xl:text-xl">
+            {description}
+          </h4>
         </m.div>
       </div>
     </m.article>

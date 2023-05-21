@@ -15,7 +15,7 @@ const Navbar = () => {
   return (
     <nav className="hidden md:flex items-center justify-end w-full h-full lg:w-4/5">
       <ul className="flex justify-around w-4/5">
-        <li className=" w-fit hover:underline">
+        <li className="w-fit hover:underline">
           <Link href="#home" onClick={handleScroll}>
             Home
           </Link>
