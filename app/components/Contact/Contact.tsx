@@ -129,7 +129,7 @@ const Contact = () => {
                   onChange={(e) => setMessage(e.target.value)}
                 />
                 <button
-                  className="self-end w-44 h-12 mt-8 border-2 border-[var(--secondary-text-color)] rounded-lg text-[var(--secondary-text-color)] text-base"
+                  className="self-end w-44 h-12 mt-8 bg-[var(--secondary-bg-color)] border border-[var(--secondary-bg-color)] rounded-lg text-[var(--secondary-text-color)] text-base hover:border-[var(--secondary-text-color)] transition-colors duration-200"
                   onClick={(e) => sendForm(e)}
                 >
                   Send Message

@@ -144,6 +144,18 @@ const HamburgerMenu = () => {
                 Projects
               </Link>
             </li>
+            <li className="flex flex-col items-center w-fit mt-20">
+              <Link
+                href="#contact"
+                className="text-2xl"
+                onClick={(e) => {
+                  handleScroll(e);
+                  toggleMenu();
+                }}
+              >
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
       )}

@@ -9,7 +9,7 @@ const Tab = () => {
 
   return (
     <div className="flex flex-col items-center justify-center w-full h-full mt-8 p-6 xl:w-full">
-      <ul className="flex text-sm items-center  border-b border-gray-200 xl:w-2/5 xl:justify-between ">
+      <ul className="flex flex-wrap text-sm items-center  border-b border-gray-200 xl:w-2/5 xl:justify-between ">
         <li className="mr-2">
           <button
             className={`${
