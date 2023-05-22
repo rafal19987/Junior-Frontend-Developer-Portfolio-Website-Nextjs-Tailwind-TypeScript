@@ -3,7 +3,7 @@ import SkillList from './SkillList';
 
 const FrontendSkills = () => {
   return (
-    <div className="w-full xl:w-3/5">
+    <div className="w-full ">
       <m.div
         className="flex flex-col items-center justify-center w-full h-full mt-12"
         initial={{ opacity: 0 }}

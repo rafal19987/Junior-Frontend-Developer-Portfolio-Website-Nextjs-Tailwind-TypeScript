@@ -22,7 +22,7 @@ const SocialItem = ({
       transition={{ delay: 0.7, duration: 0.5 }}
     >
       <Link
-        className="flex flex-col items-center justify-center w-16 h-full bg-[var(--secondary-bg-color)] rounded-lg"
+        className="flex flex-col items-center justify-center w-16 h-full bg-[var(--secondary-bg-color)] border border-[var(--secondary-bg-color)] rounded-lg hover:border-[var(--secondary-text-color)] transition-colors duration-200"
         href={reference}
         target="_blank"
       >
