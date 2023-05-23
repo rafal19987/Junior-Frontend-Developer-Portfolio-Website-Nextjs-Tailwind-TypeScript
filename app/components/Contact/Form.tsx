@@ -1,9 +1,11 @@
 'use client';
 
+import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 import ValidItem from './ValidItem';
 import ValidIcons from './ValidIcons';
+import loadingIcon from 'assets/loading.svg';
 
 const EMAIL_REGEX: RegExp = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 
@@ -25,6 +27,9 @@ const Form = () => {
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
+  // loading state
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   // button
   const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(true);
 
@@ -35,6 +40,7 @@ const Form = () => {
   const sendForm = async (e: any): Promise<void> => {
     e.preventDefault();
     if (nameValid && emailValid && messageValid) {
+      setIsLoading(true);
       try {
         const res = await fetch(
           process.env.NEXT_PUBLIC_SEND_MESSAGE_API_ROUTE!,
@@ -48,6 +54,7 @@ const Form = () => {
         );
         clearForm();
         notify();
+        setIsLoading(false);
         return await res.json();
       } catch (error) {
         console.error('Wystąpił błąd podczas wysyłania wiadomości:', error);
@@ -175,9 +182,19 @@ const Form = () => {
       <button
         onClick={(e) => sendForm(e)}
         disabled={isButtonDisabled}
-        className={`self-end w-44 h-12 mt-8 bg-[var(--secondary-bg-color)] border border-[var(--secondary-bg-color)] rounded-lg text-[var(--secondary-text-color)] text-base hover:border-[var(--secondary-text-color)] transition-colors duration-200 disabled:bg-slate-700 disabled:hover:border-[var(--secondary-bg-color)] disabled:text-slate-500 disabled:cursor-not-allowed `}
+        className={`flex items-center justify-center self-end w-44 h-12 mt-8 bg-[var(--secondary-bg-color)] border border-[var(--secondary-bg-color)] rounded-lg text-[var(--secondary-text-color)] text-base hover:border-[var(--secondary-text-color)] transition-colors duration-200 disabled:bg-slate-700 disabled:hover:border-[var(--secondary-bg-color)] disabled:text-slate-500 disabled:cursor-not-allowed `}
       >
-        Send Message
+        {isLoading ? (
+          <Image
+            className="animate-spin"
+            src={loadingIcon}
+            alt="loading icon"
+            width={30}
+            height={30}
+          />
+        ) : (
+          'Send Message'
+        )}
       </button>
     </form>
   );
