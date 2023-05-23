@@ -5,7 +5,7 @@ import StackList from './StackList';
 const Article = () => {
   return (
     <m.article
-      className="flex flex-col items-center justify-center w-full max-w-[400px] min-h-[400px] h-full mt-14   rounded-lg bg-[var(--secondary-bg-color)]  md:w-4/5"
+      className="flex flex-col items-center justify-center w-4/5 max-w-[400px] min-h-[400px] h-full mt-14   rounded-lg bg-[var(--secondary-bg-color)]  md:w-4/5 "
       initial={{ y: '30px', opacity: 0 }}
       animate={{ y: '0px', opacity: 1 }}
       transition={{ delay: 0.4, opacity: { duration: 0.5 } }}

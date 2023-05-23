@@ -25,7 +25,7 @@ const Contact = () => {
       {isInView && (
         <>
           <SectionHeader title="contact" />
-          <div className="flex flex-col items-center justify-center w-full h-full mt-8 p-6 xl:w-[1000px] md:items-start md:flex-row ">
+          <div className="flex flex-col items-center justify-center w-full h-full mt-8 mb-14 p-6 xl:w-[1000px] md:items-start md:flex-row ">
             <div className="flex flex-col items-center justify-start md:w-2/5">
               <m.span
                 className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)] md:text-3xl`}
