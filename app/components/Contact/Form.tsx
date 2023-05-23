@@ -20,8 +20,7 @@ const Form = () => {
   const [message, setMessage] = useState<string | null>(null);
   const [messageValid, setMessageValid] = useState<boolean | null>(null);
 
-  const [formValid, setFormValid] = useState<boolean | null>(null);
-
+  // input refs
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
@@ -33,15 +32,23 @@ const Form = () => {
     toast.success('Your message delivered.');
   };
 
-  const sendForm = (e: any): void => {
+  const sendForm = async (e: any): Promise<void> => {
     e.preventDefault();
     if (nameValid && emailValid && messageValid) {
-      console.log('Name: ' + name);
-      console.log('Email: ' + email);
-      console.log('Message: ' + message);
-
-      clearForm();
-      notify();
+      try {
+        const res = await fetch('http://localhost:3000/api/sendMessage', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, message }),
+        });
+        clearForm();
+        notify();
+        return await res.json();
+      } catch (error) {
+        console.error('Wystąpił błąd podczas wysyłania wiadomości:', error);
+      }
     }
   };
 
