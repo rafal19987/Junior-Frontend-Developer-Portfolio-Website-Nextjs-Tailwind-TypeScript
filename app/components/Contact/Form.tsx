@@ -36,13 +36,16 @@ const Form = () => {
     e.preventDefault();
     if (nameValid && emailValid && messageValid) {
       try {
-        const res = await fetch('http://localhost:3000/api/sendMessage', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ name, email, message }),
-        });
+        const res = await fetch(
+          process.env.NEXT_PUBLIC_SEND_MESSAGE_API_ROUTE!,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ name, email, message }),
+          }
+        );
         clearForm();
         notify();
         return await res.json();
