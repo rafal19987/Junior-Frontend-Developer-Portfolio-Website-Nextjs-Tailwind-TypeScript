@@ -96,7 +96,8 @@ const Tab = () => {
             companyName="Wandlee"
             companySite="https://wandlee.com/"
             period="08-2019 - 09-2019"
-            description="As a JavaScript develeoper I was considered on ..."
+            description="
+            As a JavaScript developer, I have primarily focused on web application layout programming using the Svelte framework and Express for Node.js. I have also been involved in testing scenarios involving interactions with our company's chatbot, which operates within the Facebook environment."
           />
         )}
         {activeTab === 'company4' && (
