@@ -34,7 +34,7 @@ const About = () => {
               opportunities to grow and excel in the field.
             </m.p>
             <m.p
-              className="text-sm mt-2 md:text-xl xl:mt-3 xl:text-xl"
+              className="w-full mt-2 text-sm md:text-xl xl:mt-1 xl:text-xl"
               initial={{ y: '30px', opacity: 0 }}
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
