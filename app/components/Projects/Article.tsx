@@ -27,12 +27,11 @@ const Article = () => {
         >
           <h4 className="text-sm text-justify  md:text-xl">
             A web app for everybody who wants to prepare for recruitment
-            interviews, especially in the JavaScript topic. You can add your own
-            pool of questions or use the existing one. The questions are stored
-            in a MongoDB database. Current questions with answers are saved in
-            local storage, so if you don`t have enough time to complete a study
-            session, you can come back to it later. You can also check the
-            original visual concept that I created in the Figma Prototype.
+            interviews, especially in the JavaScript topic. The questions are
+            stored in a SupaBase database. Current questions with answers are
+            saved in local storage, so if you don`t have enough time to complete
+            a study session, you can come back to it later. You can also check
+            the original visual concept that I created in the Figma Prototype.
           </h4>
         </m.div>
 
