@@ -109,8 +109,9 @@ const Home = () => {
               animate={{ y: '0', opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              I am an aspiring Frontend Developer focusing mainly on working
-              with React (occassionally designing in Figma).
+              I have several years of experience in sales, and I am currently
+              seeking remote or hybrid work opportunities related to IT, such as
+              frontend development, IT support, or project management.
             </m.h2>
           </div>
           <SocialList />
