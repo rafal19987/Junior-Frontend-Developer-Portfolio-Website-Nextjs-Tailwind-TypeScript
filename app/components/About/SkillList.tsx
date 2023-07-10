@@ -12,8 +12,10 @@ const SkillList = () => {
       <Skill startX="50" delayTime={1} description="Tailwind" />
       <Skill startX="60" delayTime={1.1} description="JavaScript/TypeScript" />
       <Skill startX="70" delayTime={1.2} description="Next.js" />
-      <Skill startX="80" delayTime={1.3} description="Git/Github" />
-      <Skill startX="90" delayTime={1.4} description="Figma" />
+      <Skill startX="80" delayTime={1.3} description="REST API" />
+      <Skill startX="90" delayTime={1.4} description="Git/Github" />
+      <Skill startX="100" delayTime={1.5} description="Figma" />
+      <Skill startX="100" delayTime={1.6} description="OpenAI ChatGPT" />
     </ol>
   );
 };
