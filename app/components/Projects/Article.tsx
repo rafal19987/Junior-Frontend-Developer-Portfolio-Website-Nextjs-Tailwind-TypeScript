@@ -16,7 +16,7 @@ const Article = () => {
         animate={{ x: '0px', opacity: 1 }}
         transition={{ delay: 0.6, opacity: { duration: 0.5 } }}
       >
-        JavaScript Interview questions App
+        Dynamic table using Google Books API
       </m.h3>
       <div className="flex flex-col justify-between w-full min-h-80 max-h-full">
         <m.div
@@ -26,12 +26,11 @@ const Article = () => {
           transition={{ delay: 0.8, opacity: { duration: 0.5 } }}
         >
           <h4 className="text-sm text-justify  md:text-xl">
-            A web app for everybody who wants to prepare for recruitment
-            interviews, especially in the JavaScript topic. The questions are
-            stored in a SupaBase database. Current questions with answers are
-            saved in local storage, so if you don`t have enough time to complete
-            a study session, you can come back to it later. You can also check
-            the original visual concept that I created in the Figma Prototype.
+            An application created using the latest frontend technologies,
+            including React 18, Next.js 13, Tailwind, and Typescript. The
+            application utilizes an open-source API called Google Books API to
+            gather information about books, allowing users to check their
+            details and explore other books written by the same author.
           </h4>
         </m.div>
 

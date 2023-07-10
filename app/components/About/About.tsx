@@ -30,8 +30,11 @@ const About = () => {
               animate={{ y: '0px', opacity: 1 }}
               transition={{ delay: 0.5, opacity: { duration: 0.5 } }}
             >
-              I am an aspiring Frontend Developer based in Poland looking for
-              opportunities to grow and excel in the field.
+              I am an experienced salesperson in the electrical industry, and I
+              am currently transitioning into the IT field. I specialize in
+              customer relations but also have knowledge in computer hardware,
+              networks, and both frontend and backend programming. I have a deep
+              understanding of customer needs and always strive to meet them.
             </m.p>
             <m.p
               className="w-full mt-2 text-sm md:text-xl xl:mt-1 xl:text-xl"
