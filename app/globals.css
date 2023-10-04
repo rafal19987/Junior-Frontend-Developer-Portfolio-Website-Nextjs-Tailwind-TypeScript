@@ -27,3 +27,14 @@ body {
   color: var(--primary-text-color);
   font-family: 'Poppins', sans-serif;
 }
+
+.styledScroll::-webkit-scrollbar {
+  background: var(--body-bg-color);
+  width: 4px;
+  border-radius: 10px;
+}
+
+.styledScroll::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-bg-color);
+  border-radius: 10px;
+}
