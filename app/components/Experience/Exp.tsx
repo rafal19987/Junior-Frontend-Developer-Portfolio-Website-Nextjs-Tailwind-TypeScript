@@ -24,7 +24,7 @@ export const Exp = ({
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value);
 
   return (
-    <Accordion open={open === itemId}>
+    <Accordion open={open === itemId} className="w-full">
       <AccordionHeader
         className={`${
           open === itemId ? 'text-[#CCD6F6]' : 'text-[#94A3B8]'

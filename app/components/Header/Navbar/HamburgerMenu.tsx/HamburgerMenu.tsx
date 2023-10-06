@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
   return (
     <div className="relative flex items-center justify-end w-full h-full md:hidden ">
       <button
-        className="flex flex-col items-center justify-evenly w-12 h-9 mr-8 bg-[var(--secondary-bg-color)] rounded-lg"
+        className="flex flex-col items-center justify-evenly w-12 h-9 bg-[var(--secondary-bg-color)] rounded-lg"
         onClick={toggleMenu}
       >
         {!isOpen ? (
@@ -41,8 +41,8 @@ const HamburgerMenu = () => {
         )}
       </button>
       {!isOpen ? (
-        <div className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] translate-x-full z-10 transition-all duration-300">
-          <ul className="flex flex-col items-center h-full mt-14 ">
+        <div className="absolute top-20 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] translate-x-full z-10 transition-all duration-300">
+          <ul className="flex flex-col items-center h-full mt-20 ">
             <li className="group flex flex-col items-center w-fit">
               <Link
                 href="#home"
@@ -94,8 +94,8 @@ const HamburgerMenu = () => {
           </ul>
         </div>
       ) : (
-        <div className="absolute top-14 w-screen h-[calc(100vh-3.5rem)] bg-[var(--body-bg-color)] z-10 transition-all duration-300">
-          <ul className="flex flex-col items-center h-full mt-14">
+        <div className="absolute top-20 w-screen h-[calc(100vh-5rem)] bg-[var(--body-bg-color)] z-10 transition-all duration-300">
+          <ul className="flex flex-col items-center h-full mt-20">
             <li className="group flex flex-col items-center w-fit">
               <Link
                 href="#home"

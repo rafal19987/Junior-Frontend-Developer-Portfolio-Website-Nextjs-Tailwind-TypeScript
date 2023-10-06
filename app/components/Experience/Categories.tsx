@@ -13,7 +13,7 @@ export const Categories = () => {
   };
 
   return (
-    <div className="mt-20 w-screen flex flex-col items-center justify-center">
+    <div className="mt-20 w-full flex flex-col items-center justify-center">
       <ul className="flex text-sm items-center w-fit xl:justify-between">
         {expCategories.map((c) => (
           <li
@@ -39,7 +39,7 @@ export const Categories = () => {
         ))}
       </ul>
 
-      <div className="flex items-center justify-center mt-4 w-fit">
+      <div className="flex items-center justify-center mt-4 w-full">
         {expCategories.map((c) => (
           <>
             {activeTab === c.label && (
