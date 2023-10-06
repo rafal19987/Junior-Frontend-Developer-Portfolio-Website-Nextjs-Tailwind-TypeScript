@@ -20,6 +20,18 @@
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  background: var(--body-bg-color);
+  width: 6px;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-text-color);
+  border-radius: 10px;
 }
 
 body {
