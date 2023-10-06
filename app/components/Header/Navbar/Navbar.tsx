@@ -13,8 +13,8 @@ const Navbar = () => {
     });
   };
   return (
-    <nav className="hidden md:flex items-center justify-end w-full h-full lg:w-4/5">
-      <ul className="flex justify-around w-4/5">
+    <nav className="hidden md:flex items-center justify-end w-full h-full  lg:w-4/5">
+      <ul className="flex justify-between w-4/5">
         <li className="w-fit hover:underline">
           <Link href="#home" onClick={handleScroll}>
             Home
