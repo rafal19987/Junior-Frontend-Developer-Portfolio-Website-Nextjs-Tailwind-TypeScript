@@ -1,4 +1,4 @@
-import Home from './components/Home/Home';
+import { Home } from './components/Home';
 import About from './components/About/About';
 
 import { Projects } from '@/components/Projects';
@@ -7,7 +7,7 @@ import Contact from './components/Contact/Contact';
 
 const Page = () => {
   return (
-    <main className="flex flex-col justify-center w-full max-w-[1400px] h-full mt-20">
+    <main className='flex flex-col justify-center w-full max-w-[1400px] h-full mt-20'>
       <Home />
       <About />
       <Experience />
