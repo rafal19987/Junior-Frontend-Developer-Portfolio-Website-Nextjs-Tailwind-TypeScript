@@ -28,7 +28,7 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
     );
 
   return (
-    <div className='flex flex-col items-center h-full text-[16px] text-primary font-lato'>
+    <div className='flex flex-col items-center h-full text-[16px] text-primary font-lato '>
       {children}
     </div>
   );
