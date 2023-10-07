@@ -5,9 +5,9 @@ import logo from 'assets/headerLogo.svg';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 flex items-center justify-center w-full h-20 bg-[var(--body-bg-color)]  z-10">
-      <div className="flex items-center justify-between w-full max-w-[1400px] px-8 h-full">
-        <Image src={logo} width={50} height={50} alt="logo" />
+    <header className='fixed top-0 flex items-center justify-center w-full h-20 bg-[var(--body-bg-color)]  z-10'>
+      <div className='flex items-center justify-between w-full max-w-[1400px] px-6 h-full'>
+        <Image src={logo} width={50} height={50} alt='logo' />
         <Navbar />
         <HamburgerMenu />
       </div>

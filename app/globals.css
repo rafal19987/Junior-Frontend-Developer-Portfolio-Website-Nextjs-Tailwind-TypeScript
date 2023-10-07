@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@700&display=swap');
-
 :root {
   --body-bg-color: #0a192f;
   --secondary-bg-color: #112240;

@@ -14,21 +14,21 @@ export const PageWrapper = ({ children }: { children: React.ReactNode }) => {
   if (!done)
     return (
       <section
-        id="home"
-        className="absolute top-0 flex items-center justify-center h-screen w-screen bg-[var(--body-bg-color)]"
+        id='home'
+        className='absolute top-0 flex items-center justify-center h-screen w-screen bg-[var(--body-bg-color)]'
       >
         <Image
           src={bigLogo}
           width={200}
           height={200}
-          alt="loading icon"
-          className="animate-pulse"
+          alt='loading icon'
+          className='animate-pulse'
         />
       </section>
     );
 
   return (
-    <div className="flex flex-col items-center h-full text-[16px] text-[var(--primary-text-color)]">
+    <div className='flex flex-col items-center h-full text-[16px] text-primary font-lato '>
       {children}
     </div>
   );

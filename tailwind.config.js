@@ -9,6 +9,23 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      colors: {
+        green: {
+          light: '#64ffda',
+          dark: '#64ffda47',
+        },
+        blue: {
+          light: '#112240',
+          dark: '#0a192f',
+        },
+        primary: '#CCD6F6',
+        secondary: '#94A3B8',
+      },
+      fontFamily: {
+        langar: ['var(--font-langar)'],
+        lato: ['var(--font-lato)'],
+        permanentMarker: ['var(--font-permanent-marker)'],
+      },
       keyframes: {
         animation: {
           fadeIn: 'fadeIn 1s ease-in-out 1',
