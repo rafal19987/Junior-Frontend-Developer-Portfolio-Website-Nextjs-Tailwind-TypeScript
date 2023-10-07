@@ -1,6 +1,7 @@
 import { PageWrapper } from './components/shared/PageWrapper';
 import { lato, langar, permanentMarker } from './helpers/fonts';
 import Header from './components/Header/Header';
+import { AppContextProvider } from './context/AppContext';
 import './globals.css';
 
 export const metadata = {
@@ -21,10 +22,12 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${permanentMarker.variable} ${langar.variable}`}
       >
-        <PageWrapper>
-          <Header />
-          {children}
-        </PageWrapper>
+        <AppContextProvider>
+          <PageWrapper>
+            <Header />
+            {children}
+          </PageWrapper>
+        </AppContextProvider>
       </body>
     </html>
   );
