@@ -1,6 +1,7 @@
 import { PageWrapper } from './components/shared/PageWrapper';
 import { lato, langar, permanentMarker } from './helpers/fonts';
 import { Header } from './components/Header';
+import { TailwindIndicator } from './components/shared/TailwindIndicator';
 import { AppContextProvider } from './context/AppContext';
 import './globals.css';
 
@@ -28,6 +29,7 @@ export default function RootLayout({
             {children}
           </PageWrapper>
         </AppContextProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );
