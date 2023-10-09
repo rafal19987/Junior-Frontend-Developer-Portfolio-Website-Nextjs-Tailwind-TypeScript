@@ -43,8 +43,8 @@ const tldrInfo: TSkills[] = [
 
 export const TLDR = () => {
   return (
-    <div className='flex items-center justify-centerw-full'>
-      <section className='flex flex-col gap-4 items-center justify-center p-4 mt-8 w-full max-w-[600px] bg-blue-light rounded-2xl'>
+    <div className='flex lg:self-start items-center justify-center w-full'>
+      <section className='flex flex-col gap-4 items-center justify-center p-4 mt-8 w-full max-w-[600px] xl:self-start bg-blue-light rounded-2xl'>
         <span className='text-primary font-langar'>TL;DR</span>
         <div className='grid grid-cols-3 items-start justify-center gap-8 w-full'>
           {tldrInfo.map((t) => (
