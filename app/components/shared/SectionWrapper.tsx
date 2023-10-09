@@ -53,9 +53,9 @@ export const SectionWrapper = ({
     <section
       id={id}
       ref={sectionRef}
-      className={`${
-        id === 'home' && 'max-h-[calc(100vh-5rem)]'
-      } flex flex-col items-center min-h-[calc(100vh-5rem)] px-6 scroll-mt-20`}
+      className={`
+      flex flex-col items-center min-h-[calc(100vh-5rem)] px-6 scroll-mt-20
+      ${id === 'home' && 'max-h-[calc(100vh-20rem)]'} `}
     >
       {title && (
         <div className='flex gap-8 items-center justify-center w-full h-full p-4'>
@@ -69,7 +69,7 @@ export const SectionWrapper = ({
 
       <div
         className={cn(
-          'flex flex-col items-center justify-center w-full h-full mt-8 pb-20',
+          'flex flex-col items-center justify-center w-full h-full mt-8 pb-20 ',
           className,
         )}
       >
