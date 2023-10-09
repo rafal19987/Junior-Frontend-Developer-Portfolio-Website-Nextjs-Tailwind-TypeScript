@@ -69,7 +69,7 @@ export const SectionWrapper = ({
 
       <div
         className={cn(
-          'flex flex-col items-center justify-center w-full h-full mt-8 ',
+          'flex flex-col items-center justify-center w-full h-full mt-8 pb-20',
           className,
         )}
       >

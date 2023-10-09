@@ -1,4 +1,5 @@
 const withMT = require('@material-tailwind/react/utils/withMT');
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = withMT({
@@ -9,6 +10,10 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '350px',
+        ...defaultTheme.screens,
+      },
       colors: {
         green: {
           light: '#64ffda',
