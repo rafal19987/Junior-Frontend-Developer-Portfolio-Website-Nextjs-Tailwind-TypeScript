@@ -3,7 +3,7 @@ import { type TSocials } from './content';
 
 export const Social = ({ link, svgIcon }: Omit<TSocials, 'id'>) => {
   return (
-    <div className='flex items-center justify-center w-fit lg:w-52 h-fit lg:h-52 p-4 bg-blue-light border border-blue-light rounded-lg md:rounded-2xl hover:border-green-light transition-colors duration-200 group'>
+    <div className='flex items-center justify-center w-fit lg:w-52 h-fit lg:h-52 p-4 lg:p-0 bg-blue-light border border-blue-light rounded-lg md:rounded-2xl hover:border-green-light transition-colors duration-200 group'>
       <Link
         href={link}
         target='_blank'
