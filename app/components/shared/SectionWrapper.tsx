@@ -15,7 +15,7 @@ export const SectionWrapper = ({
   className?: string;
   children: React.ReactNode;
 }) => {
-  const { handleSelect } = useAppContext();
+  const { selectedSection, handleSelect } = useAppContext();
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -59,11 +59,27 @@ export const SectionWrapper = ({
     >
       {title && (
         <div className='flex gap-8 items-center justify-center w-full h-full p-4'>
-          <div className='w-1/12 h-1 bg-[#64FFDA]' />
-          <h2 className='text-2xl xl:text-3xl font-langar'>
+          <div
+            className={`${
+              id === selectedSection
+                ? 'bg-green-light w-1/12'
+                : 'bg-primary w-0'
+            } h-1 transition-all duration-500`}
+          />
+          <h2
+            className={`${
+              id === selectedSection && 'text-green-light'
+            } text-2xl xl:text-3xl font-langar transition duration-500`}
+          >
             {title?.toUpperCase()}
           </h2>
-          <div className='w-1/12 h-1 bg-[#64FFDA]' />
+          <div
+            className={`${
+              id === selectedSection
+                ? 'bg-green-light w-1/12'
+                : 'bg-primary w-0'
+            } h-1 transition-all duration-500`}
+          />
         </div>
       )}
 
