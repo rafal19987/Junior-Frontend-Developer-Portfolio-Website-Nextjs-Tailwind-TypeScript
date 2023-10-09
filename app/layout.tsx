@@ -1,6 +1,6 @@
 import { PageWrapper } from './components/shared/PageWrapper';
 import { lato, langar, permanentMarker } from './helpers/fonts';
-import { Header } from './components/Header/Header';
+import { Header } from './components/Header';
 import { AppContextProvider } from './context/AppContext';
 import './globals.css';
 
