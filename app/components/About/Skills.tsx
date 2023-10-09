@@ -106,7 +106,7 @@ export const Skills = () => {
       <h4 className='p-2 xl:p-0 self-center sm:self-start text-xl font-langar text-primary'>
         I am familiar with:
       </h4>
-      <ul className='grid grid-cols-3 sm:grid-cols-5 w-full sm:w-fit gap-4 sm:gap-6 p-2'>
+      <ul className='grid grid-cols-3 sm:grid-cols-5 place-items-center justify-center w-full sm:w-fit gap-4 sm:gap-6 p-2'>
         {skills.map((s) => (
           <Skill key={s.id} icon={s.icon} title={s.title} />
         ))}
