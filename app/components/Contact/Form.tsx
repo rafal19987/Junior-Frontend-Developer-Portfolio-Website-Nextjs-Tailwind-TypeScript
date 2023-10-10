@@ -50,7 +50,7 @@ const Form = () => {
               'Content-Type': 'application/json',
             },
             body: JSON.stringify({ name, email, message }),
-          }
+          },
         );
         clearForm();
         notify();
@@ -120,52 +120,52 @@ const Form = () => {
   }, [nameValid, emailValid, messageValid]);
 
   return (
-    <form className="flex flex-col w-full">
-      <label className=" mt-7 md:mt-0" htmlFor="name">
+    <form className='flex flex-col w-full'>
+      <label className=' mt-7 md:mt-0' htmlFor='name'>
         Name:
       </label>
       <input
-        className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25"
-        type="text"
-        name="name"
-        placeholder="Write your name here...*"
+        className='mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25'
+        type='text'
+        name='name'
+        placeholder='Write your name here...*'
         required
         onChange={(e) => setName(e.target.value)}
         ref={nameRef}
       />
       {nameValid !== null && (
         <ValidIcons>
-          <ValidItem text="Insert atleast 4 characters" iconValid={nameValid} />{' '}
+          <ValidItem text='Insert atleast 4 characters' iconValid={nameValid} />{' '}
         </ValidIcons>
       )}
 
-      <label className=" mt-4" htmlFor="email">
+      <label className=' mt-4' htmlFor='email'>
         Email:
       </label>
       <input
-        className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25"
-        type="text"
-        name="email"
-        placeholder="Write your email here...*"
+        className='mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25'
+        type='text'
+        name='email'
+        placeholder='Write your email here...*'
         required
         onChange={(e) => setEmail(e.target.value)}
         ref={emailRef}
       />
       {emailValid !== null && (
         <ValidIcons>
-          <ValidItem text="Insert correct email" iconValid={emailValid} />
+          <ValidItem text='Insert correct email' iconValid={emailValid} />
         </ValidIcons>
       )}
 
-      <label className=" mt-4" htmlFor="message">
+      <label className=' mt-4' htmlFor='message'>
         Message:
       </label>
       <textarea
-        className="mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25 caret-[var(--secondary-text-color)]"
+        className='mt-2 p-2 bg-[var(--secondary-bg-color)] rounded-lg text-white text-base placeholder:text-[#fff]/25 caret-[var(--secondary-text-color)]'
         cols={40}
         rows={4}
-        name="message"
-        placeholder="Write your message here...*"
+        name='message'
+        placeholder='Write your message here...*'
         required
         onChange={(e) => setMessage(e.target.value)}
         ref={messageRef}
@@ -173,7 +173,7 @@ const Form = () => {
       {messageValid !== null && (
         <ValidIcons>
           <ValidItem
-            text="Insert atleast 10 characters"
+            text='Insert atleast 10 characters'
             iconValid={messageValid}
           />
         </ValidIcons>
@@ -186,9 +186,9 @@ const Form = () => {
       >
         {isLoading ? (
           <Image
-            className="animate-spin"
+            className='animate-spin'
             src={loadingIcon}
-            alt="loading icon"
+            alt='loading icon'
             width={30}
             height={30}
           />

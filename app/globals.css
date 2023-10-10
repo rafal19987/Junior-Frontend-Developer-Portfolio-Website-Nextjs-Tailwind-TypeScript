@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@700&display=swap');
-
 :root {
   --body-bg-color: #0a192f;
   --secondary-bg-color: #112240;
@@ -20,6 +18,18 @@
 html {
   --scroll-behavior: smooth !important;
   scroll-behavior: smooth !important;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  background: var(--body-bg-color);
+  width: 6px;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-text-color);
+  border-radius: 10px;
 }
 
 body {
