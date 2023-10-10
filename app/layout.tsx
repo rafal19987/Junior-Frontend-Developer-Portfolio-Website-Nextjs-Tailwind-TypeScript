@@ -1,15 +1,25 @@
+import { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/react';
 import { PageWrapper } from './components/shared/PageWrapper';
-import { lato, langar, permanentMarker } from './helpers/fonts';
 import { Header } from './components/Header';
-import { TailwindIndicator } from './components/shared/TailwindIndicator';
 import { AppContextProvider } from './context/AppContext';
+import { TailwindIndicator } from './components/shared/TailwindIndicator';
 import './globals.css';
+import { lato, langar, permanentMarker } from './helpers/fonts';
 
-export const metadata = {
-  title: 'Rafał Izdebski',
-  description: 'Rafał Izdebski Frontend Dev Portfolio Site',
+export const metadata: Metadata = {
+  title: 'Rafał Izdebski Junior Front-End Developer',
+  description: 'Junior Front-End developer portfolio website',
   icons: {
     icon: '/favicon.svg',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  openGraph: {
+    type: 'website',
+    title: 'Rafał Izdebski Junior Front-End Developer',
+    description: 'Junior Front-End Developer portfolio website',
   },
 };
 
@@ -30,6 +40,7 @@ export default function RootLayout({
           </PageWrapper>
         </AppContextProvider>
         <TailwindIndicator />
+        <Analytics />
       </body>
     </html>
   );
