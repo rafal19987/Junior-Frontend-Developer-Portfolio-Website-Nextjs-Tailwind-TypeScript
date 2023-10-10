@@ -13,8 +13,8 @@ export const Categories = () => {
   };
 
   return (
-    <div className="mt-20 w-full flex flex-col items-center justify-center">
-      <ul className="flex text-sm items-center w-fit xl:justify-between">
+    <div className='mt-20 w-full flex flex-col items-center justify-center max-w-[700px]'>
+      <ul className='flex text-sm items-center w-fit xl:justify-between'>
         {expCategories.map((c) => (
           <li
             key={c.id}
@@ -39,18 +39,18 @@ export const Categories = () => {
         ))}
       </ul>
 
-      <div className="flex items-center justify-center mt-4 w-full">
+      <div className='flex items-center justify-center mt-4 w-full'>
         {expCategories.map((c) => (
           <>
             {activeTab === c.label && (
               <m.article
-                className="flex flex-col w-full min-h-[200px] h-full  rounded-lg bg-[var(--secondary-bg-color)]"
+                className='flex flex-col w-full  h-full rounded-lg bg-[var(--secondary-bg-color)]'
                 initial={{ y: '30px', opacity: 0 }}
                 animate={{ y: '0px', opacity: 1 }}
                 transition={{ delay: 0.2, opacity: { duration: 0.5 } }}
               >
                 {experience.map(
-                  (e) => c.label === e.type && <Exp key={e.id} {...e} />
+                  (e) => c.label === e.type && <Exp key={e.id} {...e} />,
                 )}
               </m.article>
             )}
