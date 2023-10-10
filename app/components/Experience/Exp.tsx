@@ -24,11 +24,11 @@ export const Exp = ({
   const handleOpen = (value: number) => setOpen(open === value ? 0 : value);
 
   return (
-    <Accordion open={open === itemId} className="w-full">
+    <Accordion open={open === itemId} className='w-full border-none'>
       <AccordionHeader
         className={`${
           open === itemId ? 'text-[#CCD6F6]' : 'text-[#94A3B8]'
-        } hover:text-[#CCD6F6] text-[20px]`}
+        } hover:text-[#CCD6F6] text-[20px] px-4`}
         onClick={() => handleOpen(itemId)}
       >
         <div>
@@ -47,7 +47,7 @@ export const Exp = ({
           {city}
         </div>
       </AccordionHeader>
-      <AccordionBody className="text-[#CCD6F6] text-[16px]">
+      <AccordionBody className='text-[#CCD6F6] text-[16px] px-4'>
         <p>{period}</p>
         {description}
       </AccordionBody>
