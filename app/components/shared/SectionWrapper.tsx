@@ -55,7 +55,7 @@ export const SectionWrapper = ({
       ref={sectionRef}
       className={`
       flex flex-col items-center min-h-[calc(100vh-5rem)] px-6 scroll-mt-20
-      ${id === 'home' && 'max-h-[calc(100vh-20rem)]'} `}
+      `}
     >
       {title && (
         <div className='flex gap-8 items-center justify-center w-full h-full p-4'>

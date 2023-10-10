@@ -6,8 +6,8 @@ import { socials } from './content';
 
 export const Home = () => {
   return (
-    <SectionWrapper id='home' className='relative grow '>
-      <div className='flex flex-col lg:flex-row items-center justify-center gap-8 w-full h-full mt-0 sm:mt-12  lg:mt-14'>
+    <SectionWrapper id='home' className='relative grow h-screen mt-0'>
+      <div className='flex flex-col lg:flex-row items-center justify-center gap-8 w-full h-full'>
         <div className='flex flex-col gap-3 sm:gap-8 items-center justify-center w-full max-w-[500px] '>
           <Avatar />
           <div className='w-full self-start'>
