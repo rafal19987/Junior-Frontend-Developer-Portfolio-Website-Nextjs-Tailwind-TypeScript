@@ -22,7 +22,7 @@ export const Contact = () => {
     <SectionWrapper id='contact' title='contact'>
       <Toaster />
 
-      <div className='flex flex-col items-center justify-center w-full h-full mb-14  md:items-start md:flex-row md:justify-between'>
+      <div className='flex flex-col items-center justify-center w-full h-full mb-14 '>
         <div className='flex flex-col items-start justify-start md:w-2/5'>
           <span
             className={`${permamentMarker.className} self-start text-2xl text-[var(--secondary-text-color)] md:text-3xl`}
@@ -41,14 +41,7 @@ export const Contact = () => {
             <Button className='w-52 h-20'>Send e-mail</Button>
           </Link>
         </div>
-        <div className='w-full h-96 md:w-3/5 md:ml-8 lg:w-[520px] mt-12 md:mt-0'>
-          <h6 className='w-full text-center py-4  text-xl'>
-            or contact via form
-          </h6>
-          <Form />
-        </div>
       </div>
-
       <div ref={myRef} className=''></div>
     </SectionWrapper>
   );
