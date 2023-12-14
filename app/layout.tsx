@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
+import { GoogleAnalytics } from './GoogleAnalytics';
 import { PageWrapper } from './components/shared/PageWrapper';
 import { Header } from './components/Header';
 import { AppContextProvider } from './context/AppContext';
@@ -30,6 +31,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <GoogleAnalytics />
       <body
         className={`${lato.variable} ${permanentMarker.variable} ${langar.variable}`}
       >
