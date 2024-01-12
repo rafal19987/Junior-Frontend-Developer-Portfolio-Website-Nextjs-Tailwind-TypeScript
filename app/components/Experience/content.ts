@@ -21,14 +21,14 @@ export const expCategories: TExpCategories[] = [
   },
   {
     id: 2,
-    label: 'sells',
+    label: 'sales',
   },
 ];
 
 export const experience: TExperience[] = [
   {
     id: 1,
-    type: 'sells',
+    type: 'sales',
     position: 'Commercial Matters Specialist',
     city: 'Poznań',
     company: 'TIM S.A.',
@@ -39,7 +39,7 @@ export const experience: TExperience[] = [
   },
   {
     id: 2,
-    type: 'sells',
+    type: 'sales',
     position: 'Public Procurement Specialist',
     city: 'Poznań',
     company: 'Magelektro',
@@ -50,7 +50,7 @@ export const experience: TExperience[] = [
   },
   {
     id: 3,
-    type: 'sells',
+    type: 'sales',
     position: 'Customer Advisor',
     city: 'Łuków',
     company: 'Asaj',
